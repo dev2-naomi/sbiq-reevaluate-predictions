@@ -46,11 +46,8 @@ def get_tool_registry() -> dict[str, Any]:
 
 def resolve_tools_for_step(state: dict) -> list[Any]:
     registry = get_tool_registry()
-    current_step = get_current_step(state)
+    current_step = get_current_step(state) or "STEP_00"
     general_tools = [registry[name] for name in GENERAL_TOOL_NAMES if name in registry]
-
-    if not current_step:
-        return general_tools
 
     step_tool_names = get_step_tools(current_step)
     step_tools = [registry[name] for name in step_tool_names if name in registry]

@@ -154,11 +154,11 @@ def _summarize_completed_steps(
 # ---------------------------------------------------------------------------
 
 def orchestrator_node(state: ReevaluateState) -> dict:
+    current_step = state.get("current_step") or "STEP_00"
     step_tools = resolve_tools_for_step(state)
     llm_with_tools = _llm.bind_tools(step_tools)
 
     messages: list[BaseMessage] = list(state.get("messages", []))
-    current_step = state.get("current_step") or "STEP_00"
     step_reports = state.get("step_reports", {})
 
     if not any(isinstance(m, HumanMessage) for m in messages):
@@ -180,7 +180,7 @@ def orchestrator_node(state: ReevaluateState) -> dict:
 
     injected = [SystemMessage(content="\n\n---\n\n".join(system_parts))] + non_system
     response: AIMessage = llm_with_tools.invoke(injected)
-    return {"messages": [response]}
+    return {"messages": [response], "current_step": current_step}
 
 
 def should_continue(state: ReevaluateState) -> Literal["tools", "end"]:
