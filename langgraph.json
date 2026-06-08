@@ -1,0 +1,9 @@
+{
+  "$schema": "https://langgra.ph/schema.json",
+  "dependencies": ["."],
+  "graphs": {
+    "reevaluate_preconditions": "./src/agent.py:graph"
+  },
+  "env": "./.env",
+  "python_version": "3.11"
+}
