@@ -90,7 +90,7 @@ if _PROVIDER == "openai":
             "LLM_PROVIDER=openai but langchain-openai is not installed. "
             "Run `pip install langchain-openai`."
         )
-    _MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o")
+    _MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.1")
     _llm = ChatOpenAI(model=_MODEL, max_tokens=16384)
 else:
     _MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-20250514")
