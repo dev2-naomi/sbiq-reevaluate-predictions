@@ -1,0 +1,1954 @@
+{
+  "document_requests": [
+    {
+      "document_type": "Deed of Trust",
+      "document_category": "Title",
+      "party": null,
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "Must be FNMA Form 3170 (1-4 Family Rider \u2014 Assignment of Rents)",
+        "Must assign rents from the property to the lender",
+        "Must be signed/executed by all borrowers holding title",
+        "Must be recorded with the mortgage documents where required by state law"
+      ],
+      "reasons_needed": [
+        "Security instrument required for the mortgage collateral"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Deed of Trust",
+        "documentation_requirements": [
+          "Confirm fNMA Form 3170 (1-4 Family Rider \u2014 Assignment of Rents).",
+          "Must assign rents from the property to the lender.",
+          "Confirm signed/executed by all borrowers holding title.",
+          "Confirm recorded with the mortgage documents where required by state law."
+        ],
+        "reason_for_requirement": [
+          "The Deed of Trust is the security instrument that creates the lender's lien on the subject property.",
+          "A properly executed and recorded Deed of Trust is required to perfect the lender's security interest and protect the lender's collateral position."
+        ],
+        "review_notes": [
+          "The Deed of Trust is typically prepared by the settlement agent or title company and executed at closing.",
+          "Recording of the Deed of Trust must occur promptly after closing to establish lien priority."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Purchase Contract",
+      "document_category": "Cross-Cutting",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "A copy of the fully executed purchase contract is required.",
+        "All attachments to the purchase contract are required.",
+        "All addenda to the purchase contract are required.",
+        "An assignment of the purchase contract is not permitted unless the individual assigning the contract is assigning the rights to an entity in which the individual has an ownership interest."
+      ],
+      "reasons_needed": [
+        {
+          "reason": "Purchase contract is required for all purchase transactions to establish purchase price, transaction terms, and parties to the transaction",
+          "reason_type": "guideline_requirement"
+        },
+        {
+          "reason": "Purchase price of $860,000 is used to calculate LTV ratio (70% LTV = $602,000 loan amount)",
+          "reason_type": "eligibility"
+        },
+        {
+          "reason": "Contract terms must be reviewed to identify any seller concessions, financing contingencies, or non-standard terms that may affect underwriting",
+          "reason_type": "underwriting_analysis"
+        }
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Purchase Contract",
+        "documentation_requirements": [
+          "A copy of the fully executed purchase contract is required.",
+          "All attachments to the purchase contract are required.",
+          "All addenda to the purchase contract are required.",
+          "An assignment of the purchase contract is not permitted unless the individual assigning the contract is assigning the rights to an entity in which the individual has an ownership interest."
+        ],
+        "reason_for_requirement": [
+          "The purchase contract establishes the terms of the property acquisition, including the purchase price, which is used to calculate the loan-to-value ratio.",
+          "The contract is required to verify the transaction structure, earnest money deposit, and closing timeline.",
+          "Contract contingencies (e.g., financing, appraisal, inspection) must be reviewed to ensure they are consistent with the loan terms and timeline."
+        ],
+        "review_notes": [
+          "If the purchase price is reduced or the contract is amended, obtain the updated contract and re-evaluate the loan-to-value ratio and eligibility.",
+          "Verify the earnest money deposit has been paid and documented."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "01",
+      "tags": [
+        "crosscutting"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Appraisal Report",
+      "document_category": "Property",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "A completed appraisal report is required on all loan transactions",
+        "Appraiser must provide his or her license or certification on the appraisal report",
+        "Appraisals must be completed by appraisers who are properly licensed or certified in the state in which the property to be appraised is located",
+        "Appraisal orders may not contain any estimated or requested value",
+        "Comparable sales may not be suggested to the appraiser",
+        "A copy of the appraisal is required to be sent to the borrower on all loans regardless of whether the loan is closed, canceled, or denied",
+        "Borrowers must receive a copy of their appraisal within 3 business days of the time it is delivered to the lender from the appraisal management company and/or appraiser",
+        "Appraisal must use Small Residential Income Property Appraisal Report for 2-4 Unit Residential Properties (FNMA Form 1025)",
+        "Appraisal report must contain a street map showing the location of the subject property and all comparable used",
+        "Appraisal report must contain exterior building sketch of the improvements indicating dimensions",
+        "Appraisal report must contain a floor plan sketch with calculations demonstrating how the estimate for gross living area is determined",
+        "Appraisal report must contain original color photographs or digital color images of the front, street, and rear views of the subject property",
+        "Original digital black and white photographs/pictures are permitted if the appraisal clearly indicates the subject property meets our standards",
+        "Interior photos of the subject are required to include the kitchen, all bathrooms, the main living area, any areas with physical deterioration, and any renovations/improvements",
+        "Appraisal report must contain analysis of all agreements of sale, options or listings for the subject property current as of the effective date of the appraisal",
+        "Appraisal report must contain analysis of all sales of the subject property that occurred within the 3 years prior to the effective date of the appraisal",
+        "Appraisal report must include a completed Sales Comparison Approach section of FNMA Form 1004 where there are comparable used with more than one sale or transfer in the 12 months prior to the effective date of the appraisal",
+        "Appraiser must provide comments on any unfavorable conditions, such as adverse environmental or economic factors, and how those conditions impact the market value of the property",
+        "When unfavorable conditions exist, the appraiser's analysis must reflect and include comparable sales that are similarly affected",
+        "Certification and Statement of Limiting Conditions signed by the appraiser must be included",
+        "A copy of the appraiser's Errors and Omissions Insurance Policy, valid as of the date of the appraisal report, must be included with the appraisal unless confirmation is obtained from the AMC that a copy is on file with them",
+        "The appraisal must be dated within 365 days of the Note date",
+        "A recertification of value is required if the report exceeds 120 days of the Note Date",
+        "Appraisal order date may NOT be prior to initial signed dated borrowers Application and 'Intent to Proceed' issued with the initial application and disclosure package"
+      ],
+      "reasons_needed": [
+        "Collateral valuation is required for underwriting per NQMF Appraisal Requirements",
+        "LTV/CLTV eligibility (70% LTV) depends on appraised value to support $602,000 loan amount on $860,000 purchase price",
+        "Property type (SFR) and condition affect Flex Select program eligibility",
+        "Subject property identity must be consistent across loan file for owner-occupied primary residence verification",
+        "Appraisal must confirm property meets minimum property standards and is in average or better condition",
+        "Interior and exterior photos required to validate property condition and marketability",
+        "Comparable sales analysis required to support market value opinion",
+        "Appraiser independence and licensing requirements must be verified per Dodd-Frank and NQMF policy"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Appraisal Report",
+        "documentation_requirements": [
+          "A completed appraisal report is required on all loan transactions.",
+          "Appraiser must provide his or her license or certification on the appraisal report.",
+          "Appraisals must be completed by appraisers who are properly licensed or certified in the state in which the property to be appraised is located.",
+          "Appraisal orders may not contain any estimated or requested value.",
+          "Comparable sales may not be suggested to the appraiser.",
+          "A copy of the appraisal is required to be sent to the borrower on all loans regardless of whether the loan is closed, canceled, or denied.",
+          "Borrowers must receive a copy of their appraisal within 3 business days of the time it is delivered to the lender from the appraisal management company and/or appraiser.",
+          "Appraisal must use Small Residential Income Property Appraisal Report for 2-4 Unit Residential Properties (FNMA Form 1025).",
+          "Appraisal report must contain a street map showing the location of the subject property and all comparable used.",
+          "Appraisal report must contain exterior building sketch of the improvements indicating dimensions.",
+          "Appraisal report must contain a floor plan sketch with calculations demonstrating how the estimate for gross living area is determined.",
+          "Appraisal report must contain original color photographs or digital color images of the front, street, and rear views of the subject property.",
+          "Original digital black and white photographs/pictures are permitted if the appraisal clearly indicates the subject property meets our standards.",
+          "Interior photos of the subject are required to include the kitchen, all bathrooms, the main living area, any areas with physical deterioration, and any renovations/improvements.",
+          "Appraisal report must contain analysis of all agreements of sale, options or listings for the subject property current as of the effective date of the appraisal.",
+          "Appraisal report must contain analysis of all sales of the subject property that occurred within the 3 years prior to the effective date of the appraisal.",
+          "Appraisal report must include a completed Sales Comparison Approach section of FNMA Form 1004 where there are comparable used with more than one sale or transfer in the 12 months prior to the effective date of the appraisal.",
+          "Appraiser must provide comments on any unfavorable conditions, such as adverse environmental or economic factors, and how those conditions impact the market value of the property.",
+          "When unfavorable conditions exist, the appraiser's analysis must reflect and include comparable sales that are similarly affected.",
+          "Certification and Statement of Limiting Conditions signed by the appraiser must be included.",
+          "A copy of the appraiser's Errors and Omissions Insurance Policy, valid as of the date of the appraisal report, must be included with the appraisal unless confirmation is obtained from the AMC that a copy is on file with them.",
+          "The appraisal must be dated within 365 days of the Note date.",
+          "A recertification of value is required if the report exceeds 120 days of the Note Date.",
+          "Appraisal order date may NOT be prior to initial signed dated borrowers Application and 'Intent to Proceed' issued with the initial application and disclosure package."
+        ],
+        "reason_for_requirement": [
+          "The appraisal report is required to establish the market value of the subject property and support the loan-to-value ratio.",
+          "Collateral valuation is a critical component of underwriting and ensures the lender's security interest is adequately protected.",
+          "The appraisal provides an independent assessment of the property's condition, marketability, and conformity to program standards."
+        ],
+        "review_notes": [
+          "If the appraised value is less than the purchase price, the loan amount and LTV must be recalculated based on the lower of the appraised value or purchase price.",
+          "If the appraisal identifies adverse conditions or required repairs, obtain documentation that the repairs have been completed or establish an escrow holdback, if permitted by program guidelines.",
+          "If the appraisal exceeds the allowable age, obtain an appraisal update or recertification of value."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "05",
+      "tags": [
+        "property"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Flood Hazard Determination",
+      "document_category": "Property",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Flood Certificate must be provided by the Federal Emergency Management Agency (FEMA)",
+        "Appraisal report must accurately reflect the flood zone",
+        "Flood insurance is required when property is located in a Special Flood Hazard Area (SFHA), Coastal Barrier System (CBRS), or Otherwise Protected Area (OPA)",
+        "Flood insurance policy must be either a standard policy issued under NFIP or a policy issued by a private insurer if the terms and amount of coverage are at least equal to that provided under a NFIP policy based on a review of the full policy issued by the private insurer",
+        "Flood insurance must be maintained throughout the duration of the loan",
+        "If definitive evidence of flood insurance is not available at closing, a completed and executed NFIP application with a copy of the borrower's premium check, the insurance agent's paid receipt, or the final settlement statement reflecting the flood insurance premium paid at closing may be used",
+        "If definitive evidence of flood insurance is not available at closing, a completed and executed NFIP General Change Endorsement Form showing the assignment of the current flood insurance policy by the property seller to the borrower may be used",
+        "If definitive evidence of flood insurance is not available at closing, an agent-executed NFIP Certification of Proof of Purchase of Flood Insurance may be used",
+        "Evidence of Insurance must show names of borrowers that reflect the same as the note",
+        "Evidence of Insurance must show property address that agrees with the note/security instrument",
+        "Evidence of Insurance must show mailing address that is the same as property address",
+        "Evidence of Insurance must show Policy Number",
+        "Evidence of Insurance must show Loan Number",
+        "Evidence of Insurance must show Name of insurance company",
+        "Evidence of Insurance must show Insurance Agent information",
+        "Evidence of Insurance must show Effective and expiration dates of coverage",
+        "Evidence of Insurance must show Premium Amount and deductible",
+        "Evidence of Insurance must show Coverage amount",
+        "Evidence of Insurance must show Loss payee clause as applicable",
+        "Evidence of Insurance must be signed and dated by agent",
+        "Individual property or flood insurance policy must list all persons holding title to the subject property as named insured"
+      ],
+      "reasons_needed": [
+        "Flood insurance requirement determination is mandatory per NQMF and FEMA regulations",
+        "Properties in SFHA (Flood Zone A or V) require flood insurance",
+        "Community FEMA program participation affects property eligibility for financing",
+        "Lender must verify flood zone status to ensure proper insurance coverage and compliance"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Flood Hazard Determination",
+        "documentation_requirements": [
+          "Flood Certificate must be provided by the Federal Emergency Management Agency (FEMA).",
+          "Appraisal report must accurately reflect the flood zone.",
+          "Flood insurance is required when property is located in a Special Flood Hazard Area (SFHA), Coastal Barrier System (CBRS), or Otherwise Protected Area (OPA).",
+          "Flood insurance policy must be either a standard policy issued under NFIP or a policy issued by a private insurer if the terms and amount of coverage are at least equal to that provided under a NFIP policy based on a review of the full policy issued by the private insurer.",
+          "Flood insurance must be maintained throughout the duration of the loan.",
+          "If definitive evidence of flood insurance is not available at closing, a completed and executed NFIP application with a copy of the borrower's premium check, the insurance agent's paid receipt, or the final settlement statement reflecting the flood insurance premium paid at closing may be used.",
+          "If definitive evidence of flood insurance is not available at closing, a completed and executed NFIP General Change Endorsement Form showing the assignment of the current flood insurance policy by the property seller to the borrower may be used.",
+          "If definitive evidence of flood insurance is not available at closing, an agent-executed NFIP Certification of Proof of Purchase of Flood Insurance may be used.",
+          "Evidence of Insurance must show names of borrowers that reflect the same as the note.",
+          "Evidence of Insurance must show property address that agrees with the note/security instrument.",
+          "Evidence of Insurance must show mailing address that is the same as property address.",
+          "Evidence of Insurance must show Policy Number.",
+          "Evidence of Insurance must show Loan Number.",
+          "Evidence of Insurance must show Name of insurance company.",
+          "Evidence of Insurance must show Insurance Agent information.",
+          "Evidence of Insurance must show Effective and expiration dates of coverage.",
+          "Evidence of Insurance must show Premium Amount and deductible.",
+          "Evidence of Insurance must show Coverage amount.",
+          "Evidence of Insurance must show Loss payee clause as applicable.",
+          "Evidence of Insurance must be signed and dated by agent.",
+          "Individual property or flood insurance policy must list all persons holding title to the subject property as named insured."
+        ],
+        "reason_for_requirement": [
+          "A flood hazard determination is required to assess the property's flood risk and determine whether flood insurance is required.",
+          "If the property is located in an SFHA, flood insurance must be obtained and maintained for the life of the loan.",
+          "The determination ensures compliance with federal flood insurance regulations."
+        ],
+        "review_notes": [
+          "If the property is located in an SFHA, verify that flood insurance is obtained in an amount sufficient to cover the lesser of the outstanding loan balance, the maximum coverage available under the National Flood Insurance Program, or the full replacement cost of the improvements.",
+          "If the flood zone designation is uncertain or disputed, a Letter of Map Amendment (LOMA) or elevation certificate may be required."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "05",
+      "tags": [
+        "property"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Hazard Insurance",
+      "document_category": "Property",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Hazard insurance must protect against loss or damage from fire and other hazards covered by the standard extended coverage endorsement.",
+        "Hazard insurance must include coverage for fire or lightning.",
+        "Hazard insurance must include coverage for explosion.",
+        "Hazard insurance must include coverage for windstorm (including named storms).",
+        "Hazard insurance must include coverage for hail.",
+        "Hazard insurance must include coverage for smoke.",
+        "Hazard insurance must include coverage for aircraft.",
+        "Hazard insurance must include coverage for vehicles.",
+        "Hazard insurance must include coverage for riot or civil commotion.",
+        "Coverage must provide for claims to be settled on a replacement cost basis.",
+        "Property insurance policies that provide for claims to be settled on an actual cash value basis are not acceptable.",
+        "Policy must be effective for at least 60 days after the date of funding.",
+        "Evidence of Insurance may be provided in one of the following forms: Policy, Certificate of Insurance (COI), or Insurance Binder.",
+        "Names of borrowers on Evidence of Insurance must reflect the same as the names on the note.",
+        "Property address on Evidence of Insurance must agree with the note/security instrument.",
+        "Mailing address on Evidence of Insurance must be the same as property address.",
+        "Evidence of Insurance must provide Policy Number (NA on a binder).",
+        "Evidence of Insurance must provide Loan Number.",
+        "Evidence of Insurance must provide name of insurance company.",
+        "Evidence of Insurance must provide Insurance Agent information.",
+        "Evidence of Insurance must provide effective and expiration dates of coverage.",
+        "Evidence of Insurance must provide Premium Amount.",
+        "Evidence of Insurance must provide coverage amounts and deductible.",
+        "Evidence of Insurance must provide loss payee clause as applicable.",
+        "Evidence of Insurance must be signed and dated by agent.",
+        "The policy must require the insurer to notify in writing the named insured and mortgagee(s) before it cancels the policy.",
+        "Hazard insurance coverage must be in the amount of the lesser of: the unpaid principal balance of the mortgage or 100% Replacement Cost Coverage as stated on the policy declaration page.",
+        "If the unpaid principal balance or 100% Replacement Cost Coverage requirements are not met, coverage must be equal to at least 100% of the insurable value of improvements, as established by the property insurer through a Replacement Cost Estimator or equivalent.",
+        "If the policy does not cover the unpaid principal balance, have guaranteed replacement cost or a replacement cost estimate is not provided, a processor's certification verifying the insurer's coverage is equal to 100% of the insurable value of improvements as indicated by the insurance agent or representative is acceptable.",
+        "The applicable insurance policy must include (or have attached) a standard or union mortgagee clause (without contribution) in the form customarily used in the area in which the property is located.",
+        "A loss payable clause in lieu of a mortgagee clause is not acceptable."
+      ],
+      "reasons_needed": [
+        "Property insurance is required for all 1-4 unit properties per NQMF guidelines",
+        "Protects lender's collateral interest in subject property",
+        "Mortgagee clause ensures lender receives loss proceeds to protect loan collateral",
+        "Named insured verification ensures borrower has full rights to policy and ability to receive benefits",
+        "Cancellation notice requirement protects lender from uninsured collateral risk"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Hazard Insurance",
+        "documentation_requirements": [
+          "Hazard insurance must protect against loss or damage from fire and other hazards covered by the standard extended coverage endorsement.",
+          "Hazard insurance must include coverage for fire or lightning.",
+          "Hazard insurance must include coverage for explosion.",
+          "Hazard insurance must include coverage for windstorm (including named storms).",
+          "Hazard insurance must include coverage for hail.",
+          "Hazard insurance must include coverage for smoke.",
+          "Hazard insurance must include coverage for aircraft.",
+          "Hazard insurance must include coverage for vehicles.",
+          "Hazard insurance must include coverage for riot or civil commotion.",
+          "Coverage must provide for claims to be settled on a replacement cost basis.",
+          "Property insurance policies that provide for claims to be settled on an actual cash value basis are not acceptable.",
+          "Policy must be effective for at least 60 days after the date of funding.",
+          "Evidence of Insurance may be provided in one of the following forms: Policy, Certificate of Insurance (COI), or Insurance Binder.",
+          "Names of borrowers on Evidence of Insurance must reflect the same as the names on the note.",
+          "Property address on Evidence of Insurance must agree with the note/security instrument.",
+          "Mailing address on Evidence of Insurance must be the same as property address.",
+          "Evidence of Insurance must provide Policy Number (NA on a binder).",
+          "Evidence of Insurance must provide Loan Number.",
+          "Evidence of Insurance must provide name of insurance company.",
+          "Evidence of Insurance must provide Insurance Agent information.",
+          "Evidence of Insurance must provide effective and expiration dates of coverage.",
+          "Evidence of Insurance must provide Premium Amount.",
+          "Evidence of Insurance must provide coverage amounts and deductible.",
+          "Evidence of Insurance must provide loss payee clause as applicable.",
+          "Evidence of Insurance must be signed and dated by agent.",
+          "The policy must require the insurer to notify in writing the named insured and mortgagee(s) before it cancels the policy.",
+          "Hazard insurance coverage must be in the amount of the lesser of: the unpaid principal balance of the mortgage or 100% Replacement Cost Coverage as stated on the policy declaration page.",
+          "If the unpaid principal balance or 100% Replacement Cost Coverage requirements are not met, coverage must be equal to at least 100% of the insurable value of improvements, as established by the property insurer through a Replacement Cost Estimator or equivalent.",
+          "If the policy does not cover the unpaid principal balance, have guaranteed replacement cost or a replacement cost estimate is not provided, a processor's certification verifying the insurer's coverage is equal to 100% of the insurable value of improvements as indicated by the insurance agent or representative is acceptable.",
+          "The applicable insurance policy must include (or have attached) a standard or union mortgagee clause (without contribution) in the form customarily used in the area in which the property is located.",
+          "A loss payable clause in lieu of a mortgagee clause is not acceptable."
+        ],
+        "reason_for_requirement": [
+          "Hazard insurance is required to protect the lender's collateral interest in the subject property against loss or damage.",
+          "Adequate insurance coverage ensures the property can be repaired or rebuilt in the event of a covered loss.",
+          "The lender must be named on the policy to receive notification of cancellation or non-renewal and to be paid in the event of a claim."
+        ],
+        "review_notes": [
+          "If the property is located in a high-risk area (e.g., wildfire, hurricane, earthquake), additional coverage or endorsements may be required.",
+          "Verify the borrower has paid the first year's premium or provided evidence of payment.",
+          "If the property is in a condominium or planned unit development, verify that the homeowners association maintains a master insurance policy and obtain evidence of coverage."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "05",
+      "tags": [
+        "property"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Title Commitment",
+      "document_category": "Title",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Loan must be covered by a title insurance policy that has been paid in full and is valid, binding, and remains in full force and effect.",
+        "Preliminary title must indicate that the final title policy will be issued after funding.",
+        "Title insurer must be qualified to do business in the state where the subject property is located.",
+        "Title insurer and policy must conform to Fannie Mae/Freddie Mac requirements.",
+        "Final title policy must be written on 2006 American Land Title Association (ALTA) standard form, ALTA short form, or ALTA form with amendments required by state law in states in which standard ALTA forms of coverage are not used or in which the 2006 ALTA forms have not yet been adopted, provided those amendments are acceptable to FNMA or Freddie Mac (FHLMC).",
+        "Title insurer must be duly authorized and licensed, as required, to issue title insurance in the state where the property is located.",
+        "Title insurer must be evaluated in accordance with the lender's procedures for title insurer approval, which may include factors such as an acceptable rating from a rating agency, financial strength of the title insurer, adequate reserves, or record related to satisfactory title claim resolution.",
+        "All files must contain a 24-month title history from an acceptable source.",
+        "Transfer date, price, and buyer and seller names on any title transfers that occurred within the previous 24 months should be provided.",
+        "Vesting history should be reviewed for inconsistencies or any indication of flipping activity.",
+        "Customary public utility subsurface easements are allowable title exceptions only if the location is fixed and can be verified, and the exercise of rights of easement will not interfere with use and enjoyment of any improvement of the subject property or proposed improvements upon which the appraisal or loan is based.",
+        "Above-surface public utility easements that extend along one or more property lines for distribution purposes, or along the rear property line for drainage, are allowable title exceptions only if they do not extend more than 12 feet from the subject property lines and do not interfere with any of the buildings or improvements, or with the use of the subject property.",
+        "Public utility restrictions are allowable title exceptions provided their violation will not result in the forfeiture or reversion of title or a lien of any kind for damages, or have an adverse effect on the fair market value of the subject property.",
+        "Mutual easement agreements that establish joint driveways or party walls constructed on the subject property and on an adjoining property are allowable title exceptions provided all future owners have unlimited and unrestricted use of them.",
+        "Encroachments of one foot or less on adjoining property by eaves or other overhanging projections or by driveways are allowable title exceptions provided there is at least a 10-foot clearance between the buildings on the subject property and the property line affected by the encroachments.",
+        "Encroachments on the subject property by improvements on adjoining property are allowable title exceptions provided these encroachments extend one foot or less over the property line of the subject property, have a total area of 50 square feet or less, do not touch any buildings, and do not interfere with the use of any improvements on the subject property or the use of the subject property not occupied by improvements.",
+        "Encroachments on adjoining properties by hedges or removable fences are allowable title exceptions.",
+        "Liens for real estate or ad valorem taxes and assessments not yet due and payable are allowable title exceptions.",
+        "Outstanding oil, water, or mineral rights are allowable title exceptions if they do not materially alter the contour of the property or impair its value or usefulness for its intended purposes.",
+        "Municipals and local searches, when provided, must be cleared/resolved prior to loan funding or purchase."
+      ],
+      "reasons_needed": [
+        "Title commitment confirms ownership and insurable interest in the subject property",
+        "Verifies borrower Mark Kashana has clear title to secure the $602,000 first lien mortgage",
+        "Discloses any liens, judgments, or encumbrances that could affect lien position or closing conditions",
+        "24-month chain of title required to identify any flipping activity or vesting inconsistencies",
+        "Ensures property can be insured and lien position is first priority for underwriting approval",
+        "Required for all mortgage transactions to assess title risk and marketability",
+        "Vesting must reconcile with borrower identity and transaction structure (owner-occupied purchase)"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Title Commitment",
+        "documentation_requirements": [
+          "Loan must be covered by a title insurance policy that has been paid in full and is valid, binding, and remains in full force and effect.",
+          "Preliminary title must indicate that the final title policy will be issued after funding.",
+          "Title insurer must be qualified to do business in the state where the subject property is located.",
+          "Title insurer and policy must conform to Fannie Mae/Freddie Mac requirements.",
+          "Final title policy must be written on 2006 American Land Title Association (ALTA) standard form, ALTA short form, or ALTA form with amendments required by state law in states in which standard ALTA forms of coverage are not used or in which the 2006 ALTA forms have not yet been adopted, provided those amendments are acceptable to FNMA or Freddie Mac (FHLMC).",
+          "Title insurer must be duly authorized and licensed, as required, to issue title insurance in the state where the property is located.",
+          "Title insurer must be evaluated in accordance with the lender's procedures for title insurer approval, which may include factors such as an acceptable rating from a rating agency, financial strength of the title insurer, adequate reserves, or record related to satisfactory title claim resolution.",
+          "All files must contain a 24-month title history from an acceptable source.",
+          "Transfer date, price, and buyer and seller names on any title transfers that occurred within the previous 24 months should be provided.",
+          "Vesting history should be reviewed for inconsistencies or any indication of flipping activity.",
+          "Customary public utility subsurface easements are allowable title exceptions only if the location is fixed and can be verified, and the exercise of rights of easement will not interfere with use and enjoyment of any improvement of the subject property or proposed improvements upon which the appraisal or loan is based.",
+          "Above-surface public utility easements that extend along one or more property lines for distribution purposes, or along the rear property line for drainage, are allowable title exceptions only if they do not extend more than 12 feet from the subject property lines and do not interfere with any of the buildings or improvements, or with the use of the subject property.",
+          "Public utility restrictions are allowable title exceptions provided their violation will not result in the forfeiture or reversion of title or a lien of any kind for damages, or have an adverse effect on the fair market value of the subject property.",
+          "Mutual easement agreements that establish joint driveways or party walls constructed on the subject property and on an adjoining property are allowable title exceptions provided all future owners have unlimited and unrestricted use of them.",
+          "Encroachments of one foot or less on adjoining property by eaves or other overhanging projections or by driveways are allowable title exceptions provided there is at least a 10-foot clearance between the buildings on the subject property and the property line affected by the encroachments.",
+          "Encroachments on the subject property by improvements on adjoining property are allowable title exceptions provided these encroachments extend one foot or less over the property line of the subject property, have a total area of 50 square feet or less, do not touch any buildings, and do not interfere with the use of any improvements on the subject property or the use of the subject property not occupied by improvements.",
+          "Encroachments on adjoining properties by hedges or removable fences are allowable title exceptions.",
+          "Liens for real estate or ad valorem taxes and assessments not yet due and payable are allowable title exceptions.",
+          "Outstanding oil, water, or mineral rights are allowable title exceptions if they do not materially alter the contour of the property or impair its value or usefulness for its intended purposes.",
+          "Municipals and local searches, when provided, must be cleared/resolved prior to loan funding or purchase."
+        ],
+        "reason_for_requirement": [
+          "The title commitment is required to verify the borrower has marketable title to the subject property and to identify any liens or encumbrances that must be satisfied at closing.",
+          "The commitment ensures the lender will receive the required lien priority and that the title insurance policy will be issued as expected.",
+          "Title defects or unresolved liens can prevent the loan from closing or jeopardize the lender's security interest."
+        ],
+        "review_notes": [
+          "If the title commitment identifies any liens, judgments, or encumbrances that will not be paid off at closing, obtain documentation and determine whether they are acceptable under program guidelines.",
+          "If the legal description or vesting does not match the purchase contract or other loan documents, resolve the discrepancy prior to closing.",
+          "Verify the title insurance policy will be issued in the amount of the loan and will include standard lender coverage and any required endorsements."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "06",
+      "tags": [
+        "title"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Grant Deed",
+      "document_category": "Title",
+      "party": null,
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Final title policy vesting must reflect the name(s) of the individual borrower(s)",
+        "Vesting must not be in the form of a Land Trust",
+        "Vesting must not be in the form of a Blind Trust",
+        "Vesting must not be in the form of a Life Estate",
+        "Vesting must not be in the form of a Non-Profit Corporation",
+        "Vesting must not be in the form of an IRA",
+        "Vesting must not be in the form of an Irrevocable Trust"
+      ],
+      "reasons_needed": [
+        "Vesting deed confirms current property ownership and how title is held",
+        "Verifies seller has legal authority to convey property to borrower Mark Kashana",
+        "Ensures vesting aligns with purchase contract and title commitment",
+        "Required to confirm chain of title and ownership transfer for purchase transaction",
+        "Underwriter must verify seller's ownership interest before approving loan",
+        "Vesting form must be acceptable per NQMF guidelines for owner-occupied primary residence"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Grant Deed",
+        "documentation_requirements": [
+          "Final title policy vesting must reflect the name(s) of the individual borrower(s).",
+          "Vesting must not be in the form of a Land Trust.",
+          "Vesting must not be in the form of a Blind Trust.",
+          "Vesting must not be in the form of a Life Estate.",
+          "Vesting must not be in the form of a Non-Profit Corporation.",
+          "Vesting must not be in the form of an IRA.",
+          "Vesting must not be in the form of an Irrevocable Trust."
+        ],
+        "reason_for_requirement": [
+          "The Grant Deed is the instrument that transfers ownership of the subject property from the seller to the borrower.",
+          "A properly executed and recorded deed is required to establish the borrower's ownership and the lender's ability to perfect its lien.",
+          "The deed must be recorded in the public records to provide constructive notice of the ownership transfer."
+        ],
+        "review_notes": [
+          "The Grant Deed is typically prepared by the settlement agent or title company and executed at closing.",
+          "Recording of the deed must occur promptly after closing, typically simultaneously with the Deed of Trust."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "06",
+      "tags": [
+        "title"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "UCDP SSR",
+      "document_category": "Property",
+      "party": null,
+      "priority": "P1",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Must be a Fannie Mae Selling System Report (SSR) with a score of 2.5 or less",
+        "If the SSR score exceeds 2.5, an additional review product is required (e.g. desk review, field review, or second appraisal)",
+        "Must support the appraised value for the transaction"
+      ],
+      "reasons_needed": [
+        "Appraisal Review Process required per NQMF guidelines for 1-4 unit residential properties",
+        "SSR provides secondary appraisal product to support appraisal value for transaction",
+        "Quality control validation of appraisal methodology and value conclusion",
+        "Risk mitigation for collateral valuation accuracy"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "UCDP SSR",
+        "documentation_requirements": [
+          "Confirm a Fannie Mae Selling System Report (SSR) with a score of 2.5 or less.",
+          "If the SSR score exceeds 2.5, an additional review product is required (e.g. desk review, field review, or second appraisal).",
+          "Must support the appraised value for the transaction."
+        ],
+        "reason_for_requirement": [
+          "UCDP submission is required to ensure the appraisal meets Fannie Mae's data quality and formatting standards.",
+          "The SSR provides confirmation that the appraisal has been successfully uploaded and accepted by the collateral database.",
+          "Successful UCDP submission is a prerequisite for loan delivery to Fannie Mae or other investors requiring UCDP compliance."
+        ],
+        "review_notes": [
+          "If the SSR reflects fatal errors, the appraisal must be corrected and resubmitted before the loan can proceed.",
+          "Warnings or informational messages should be reviewed to determine whether additional documentation or clarification is required."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": null
+      },
+      "source_module": "05",
+      "tags": [
+        "property"
+      ],
+      "applicable_parties": null,
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Initial Loan Application (1003)",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "Final signed and dated URLA (Form 1003) for all borrowers",
+        "All sections complete and consistent with the loan terms and program"
+      ],
+      "reasons_needed": [
+        "Final signed loan application required for all loans"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Initial Loan Application (1003)",
+        "documentation_requirements": [
+          "Final signed and dated URLA (Form 1003) for all borrowers.",
+          "All sections complete and consistent with the loan terms and program."
+        ],
+        "reason_for_requirement": [
+          "The loan application is the foundational document for the mortgage transaction and establishes the borrower's intent, loan parameters, and initial disclosures.",
+          "A complete and accurate application is required to initiate underwriting and ensure compliance with regulatory requirements."
+        ],
+        "review_notes": [
+          "If the application is incomplete or contains inconsistencies, request clarification or corrections from the borrower.",
+          "The application must be consistent with all supporting documentation, including income, asset, and property documents."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "LoanNex Product & Pricing Results",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "LoanNex product and pricing results matching the loan program, rate, and price reflected in the loan file \u2014 or, if LoanNex results are unavailable, the completed Submission Form (Program, Loan Purpose, Loan Amount, Appraised Value, Purchase Price, Occupancy, Property Type, Product Type, Term, Interest Rate, Interest Only, 2/1 Buydown, and Prepayment Penalty selections), or a signed Rate Lock Confirmation / Interest Rate Lock In Agreement confirming the locked rate and terms"
+      ],
+      "reasons_needed": [
+        "Required for all transactions per NQMF submission requirements \u2014 confirms the priced product/rate/terms match the loan file"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "LoanNex Product & Pricing Results",
+        "documentation_requirements": [
+          "LoanNex product and pricing results matching the loan program, rate, and price reflected in the loan file \u2014 or, if LoanNex results are unavailable, the completed Submission Form (Program, Loan Purpose, Loan Amount, Appraised Value, Purchase Price, Occupancy, Property Type, Product Type, Term, Interest Rate, Interest Only, 2/1 Buydown, and Prepayment Penalty selections), or a signed Rate Lock Confirmation / Interest Rate Lock In Agreement confirming the locked rate and terms."
+        ],
+        "reason_for_requirement": [
+          "Product and pricing documentation is required to confirm the loan program, rate, and pricing structure selected by the borrower and locked by the lender.",
+          "The output establishes the program guidelines and overlays that govern the loan's underwriting and documentation requirements."
+        ],
+        "review_notes": [
+          "If the loan program or pricing changes during the transaction, obtain updated Product & Pricing Results and re-evaluate document needs and eligibility."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Borrower Authorization",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "Signed authorization for the lender to verify credit, employment, income, and asset information",
+        "Signed and dated by all borrowers"
+      ],
+      "reasons_needed": [
+        "Program eligibility requires a general borrower authorization on file"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Borrower Authorization",
+        "documentation_requirements": [
+          "Signed authorization for the lender to verify credit, employment, income, and asset information.",
+          "Signed and dated by all borrowers."
+        ],
+        "reason_for_requirement": [
+          "Borrower authorization is required to permit the lender to obtain third-party verifications and documentation necessary for underwriting.",
+          "The authorization ensures compliance with privacy laws and provides legal permission to access the borrower's financial and personal information."
+        ],
+        "review_notes": [
+          "The authorization should be obtained early in the loan process to avoid delays in verification activities."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Form 1040",
+      "document_category": "Income",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "satisfied_but_review_required",
+      "specifications": [
+        "Must be signed and dated or include electronic filing confirmation"
+      ],
+      "reasons_needed": [
+        "Full documentation self-employed borrowers require personal tax returns"
+      ],
+      "satisfied_specifications": [
+        {
+          "specification": "Must include complete personal tax returns for the most recent 2 tax years",
+          "reason": "2025 Form 1040 is present in the extracted fields, representing the most recent tax year available in the submission."
+        },
+        {
+          "specification": "Must include all schedules and attachments (Schedule E, Schedule K-1, etc.)",
+          "reason": "Schedule E is present with Part I (rental property details for two properties) and Part II (S-Corporation business information); multiple Schedule K-1 documents are also present showing S-Corporation distributions and ownership details for SMA AUTO REPAIR INC and SMA 2 AUTO REPAIR INC."
+        },
+        {
+          "specification": "Must show borrower name and SSN matching loan application",
+          "reason": "Form 1040 extracted data shows owner1 as MARK KASHANA with SSN ending in 5575, matching the loan application borrower Mark Kashana (last4_ssn 5575); Schedule K-1 documents confirm MARK KASHANA with last4SSN 5575 as shareholder."
+        },
+        {
+          "specification": "Must include Schedule K-1 showing S-Corporation distributions and ownership percentage",
+          "reason": "Multiple Schedule K-1 documents are present: two K-1s for SMA AUTO REPAIR INC (EIN 331679094) showing Mark Kashana with 33% ownership and line1 value of 219444; two K-1s for SMA 2 AUTO REPAIR INC (EIN 332485066) showing Mark Kashana with 33% ownership and line1 value of -59070. These documents clearly display S-Corporation distributions and ownership percentages."
+        }
+      ],
+      "document_ids": [
+        "5b6b5912-139e-4ad5-8059-144edd51f912"
+      ],
+      "display": {
+        "document_heading": "Form 1040",
+        "documentation_requirements": [
+          "Confirm signed and dated or include electronic filing confirmation."
+        ],
+        "reason_for_requirement": [
+          "Tax transcript verification is required for all self-employed borrowers to validate reported income and ensure consistency with filed tax returns.",
+          "IRS transcripts provide independent third-party verification of income documentation.",
+          "Form 4506-C is the authorization that permits the lender to obtain tax transcripts directly from the IRS."
+        ],
+        "review_notes": [
+          "If the borrower has filed amended returns, additional documentation may be required to reconcile differences between the original and amended filings.",
+          "The form must be re-signed if more than 120 days elapse between signing and the transcript request."
+        ],
+        "satisfied_requirements": [
+          "Confirm complete personal tax returns for the most recent 2 tax years \u2014 2025 Form 1040 is present in the extracted fields, representing the most recent tax year available in the submission.",
+          "Confirm all schedules and attachments (Schedule E, Schedule K-1, etc.) \u2014 Schedule E is present with Part I (rental property details for two properties) and Part II (S-Corporation business information); multiple Schedule K-1 documents are also present showing S-Corporation distributions and ownership details for SMA AUTO REPAIR INC and SMA 2 AUTO REPAIR INC.",
+          "Verify borrower name and SSN matching loan application \u2014 Form 1040 extracted data shows owner1 as MARK KASHANA with SSN ending in 5575, matching the loan application borrower Mark Kashana (last4_ssn 5575); Schedule K-1 documents confirm MARK KASHANA with last4SSN 5575 as shareholder.",
+          "Confirm schedule K-1 showing S-Corporation distributions and ownership percentage \u2014 Multiple Schedule K-1 documents are present: two K-1s for SMA AUTO REPAIR INC (EIN 331679094) showing Mark Kashana with 33% ownership and line1 value of 219444; two K-1s for SMA 2 AUTO REPAIR INC (EIN 332485066) showing Mark Kashana with 33% ownership and line1 value of -59070. These documents clearly display S-Corporation distributions and ownership percentages."
+        ],
+        "document_ids": [
+          "5b6b5912-139e-4ad5-8059-144edd51f912"
+        ],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Bank Statement",
+      "document_category": "Income",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "Borrowers may provide either 12 or 24 consecutive months of personal bank statements",
+        "12 or 24 months complete personal bank statements must be from the same account",
+        "Most recent 2 months of business bank statements must be provided if available",
+        "Evidence of online transfer/check from the business account to the personal account must be evident to consider allowing 100% of deposits",
+        "When using 100% of online transfer/check deposits going from the business account to the personal account, all other deposits are excluded",
+        "A pattern/history of deposits from the business account to the personal account must be established",
+        "Borrowers must be self-employed for at least 2 years",
+        "The business must be in existence for a minimum of 2 years as evidenced by a letter from either the business tax professional, regulatory agency or licensing bureau",
+        "The Employment Section of the application must include a minimum of 2 years employment history",
+        "Non-Permanent Resident Aliens without U.S. Credit are ineligible",
+        "Foreign Nationals are ineligible",
+        "Non-Profits are ineligible",
+        "Not for Profits are ineligible",
+        "At least one of the borrowers must be self-employed",
+        "All borrowers are required to be account holders of the bank accounts throughout the 12 or 24 months being used to qualify",
+        "Verify the business is active and operating within 30 days of closing with either a phone listing and/or business address using directory assistance or internet search",
+        "Tax returns are not required",
+        "4506-C is not required",
+        "If Tax returns and/or Transcripts are provided, the loan will be ineligible"
+      ],
+      "reasons_needed": [
+        "Program eligibility requires bank-statement income documentation"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Bank Statement",
+        "documentation_requirements": [
+          "Borrowers may provide either 12 or 24 consecutive months of personal bank statements.",
+          "12 or 24 months complete personal bank statements must be from the same account.",
+          "Most recent 2 months of business bank statements must be provided if available.",
+          "Evidence of online transfer/check from the business account to the personal account must be evident to consider allowing 100% of deposits.",
+          "When using 100% of online transfer/check deposits going from the business account to the personal account, all other deposits are excluded.",
+          "A pattern/history of deposits from the business account to the personal account must be established.",
+          "Borrowers must be self-employed for at least 2 years.",
+          "The business must be in existence for a minimum of 2 years as evidenced by a letter from either the business tax professional, regulatory agency or licensing bureau.",
+          "The Employment Section of the application must include a minimum of 2 years employment history.",
+          "Non-Permanent Resident Aliens without U.S. Credit are ineligible.",
+          "Foreign Nationals are ineligible.",
+          "Non-Profits are ineligible.",
+          "Not for Profits are ineligible.",
+          "At least one of the borrowers must be self-employed.",
+          "All borrowers are required to be account holders of the bank accounts throughout the 12 or 24 months being used to qualify.",
+          "Verify the business is active and operating within 30 days of closing with either a phone listing and/or business address using directory assistance or internet search.",
+          "Tax returns are not required.",
+          "4506-C is not required.",
+          "If Tax returns and/or Transcripts are provided, the loan will be ineligible."
+        ],
+        "reason_for_requirement": [
+          "Personal bank statements are required to verify the borrower has sufficient liquid assets to complete the transaction and meet reserve requirements.",
+          "Statements provide evidence of funds to close and demonstrate the borrower's ability to manage financial obligations.",
+          "Asset documentation is required under Full Documentation standards to support the borrower's overall financial capacity."
+        ],
+        "review_notes": [
+          "If the statements show insufficient funds, additional asset accounts or gift funds may be required.",
+          "Statements must be the most recent available and dated within 90 days of the loan application.",
+          "If the account is jointly held, verify the borrower has access to the funds and document the co-owner's consent if required."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Business License",
+      "document_category": "Income",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "HARD-STOP",
+      "status": "needed",
+      "specifications": [
+        "Current, unexpired business license (or equivalent registration) for the borrower's self-employed business",
+        "Business name matches the business name on the loan application"
+      ],
+      "reasons_needed": [
+        "Program eligibility requires proof of active business licensure for self-employed borrowers"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Business License",
+        "documentation_requirements": [
+          "Current, unexpired business license (or equivalent registration) for the borrower's self-employed business.",
+          "Business name matches the business name on the loan application."
+        ],
+        "reason_for_requirement": [
+          "Business license or registration documentation is required to verify the legal existence and operational status of the self-employed borrower's business entity.",
+          "Documentation confirms the business is in good standing and authorized to conduct business in the applicable jurisdiction."
+        ],
+        "review_notes": [
+          "Acceptable documentation includes a business license, articles of incorporation, certificate of formation, or state registration certificate.",
+          "If the business operates in multiple jurisdictions, obtain documentation for the primary place of business."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Government-Issued Photo ID",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Government ID must verify the borrower's name",
+        "Government ID must verify the borrower's date of birth",
+        "Government ID must verify the borrower's address",
+        "Government ID must verify the borrower's identification number",
+        "Identity of all borrowers must be documented"
+      ],
+      "reasons_needed": [
+        {
+          "reason": "Identity verification is required for all borrowers to ensure compliance with USA PATRIOT Act and CIP requirements",
+          "reason_type": "compliance"
+        },
+        {
+          "reason": "Borrower identity must be confirmed before credit, title, income, and asset documents can be relied upon",
+          "reason_type": "document_validation"
+        }
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Government-Issued Photo ID",
+        "documentation_requirements": [
+          "Government ID must verify the borrower's name.",
+          "Government ID must verify the borrower's date of birth.",
+          "Government ID must verify the borrower's address.",
+          "Government ID must verify the borrower's identification number.",
+          "Identity of all borrowers must be documented."
+        ],
+        "reason_for_requirement": [
+          "Identity verification is required to comply with program guidelines and regulatory requirements.",
+          "Borrower identity must be established and documented prior to loan closing."
+        ],
+        "review_notes": [
+          "Acceptable forms of identification include a valid driver's license, state-issued ID card, passport, or military ID.",
+          "If the name on the identification does not match the loan application, obtain legal documentation supporting the name change (e.g., marriage certificate, court order)."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "01",
+      "tags": [
+        "crosscutting"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": "",
+      "acceptable_types": [
+        "Drivers License",
+        "Passport",
+        "Non-Driver ID",
+        "Permanent Resident Card",
+        "Social Security ID",
+        "Travel VISA"
+      ]
+    },
+    {
+      "document_type": "IRS 4506-C Authorization",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "A signed IRS 4506-C must be completed and signed by all borrowers qualifying as full doc.",
+        "The form must request the appropriate type of transcript based on the level of loan documentation (W-2s, tax transcripts, etc.).",
+        "Transcripts executed for 1 or 2 years, depending on the qualifying doc type, are required as an alternative to electronic verification of employment.",
+        "The transcripts must be reviewed and compared to the qualifying income to confirm consistency.",
+        "The results from the transcripts should be equal to or greater than the income used to qualify the loan.",
+        "Any inconsistencies between the transcripts and the qualifying income should be addressed."
+      ],
+      "reasons_needed": [
+        {
+          "reason": "IRS Form 4506-C is required for all income sources per NQMF Full Documentation guidelines",
+          "reason_type": "guideline_requirement"
+        },
+        {
+          "reason": "Tax transcript verification is mandatory to validate self-employment income reported on 2023 and 2024 tax returns (Schedule C and K-1 income)",
+          "reason_type": "income_verification"
+        }
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "IRS 4506-C Authorization",
+        "documentation_requirements": [
+          "A signed IRS 4506-C must be completed and signed by all borrowers qualifying as full doc.",
+          "The form must request the appropriate type of transcript based on the level of loan documentation (W-2s, tax transcripts, etc.).",
+          "Transcripts executed for 1 or 2 years, depending on the qualifying doc type, are required as an alternative to electronic verification of employment.",
+          "The transcripts must be reviewed and compared to the qualifying income to confirm consistency.",
+          "The results from the transcripts should be equal to or greater than the income used to qualify the loan.",
+          "Any inconsistencies between the transcripts and the qualifying income should be addressed."
+        ],
+        "reason_for_requirement": [
+          "IRS Form 4506-C is required to obtain tax transcripts for all self-employed borrowers to validate reported income and ensure consistency with filed tax returns.",
+          "Tax transcripts provide independent third-party verification of the borrower's tax filing history and income documentation."
+        ],
+        "review_notes": [
+          "If the borrower has filed amended returns, additional documentation may be required to reconcile differences between the original and amended filings.",
+          "The form must be re-signed if more than 120 days elapse between signing and the transcript request."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "01",
+      "tags": [
+        "crosscutting"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Credit Report",
+      "document_category": "Credit",
+      "party": "borrower",
+      "priority": "P0",
+      "severity": "SOFT-STOP",
+      "status": "satisfied_but_review_required",
+      "specifications": [
+        "Credit report must include verification of all credit references provided on the loan application",
+        "The account must have been active in the past 12 months and may be opened or closed",
+        "A supplement may be used to update the account activity"
+      ],
+      "reasons_needed": [
+        "Credit score of 778 must be validated against Flex Select program minimum credit score requirement",
+        "Tradeline requirements must be verified: 3 tradelines reporting 12+ months OR 2 tradelines reporting 24+ months with activity in last 12 months",
+        "Credit report is required for all borrowers on owner-occupied transactions per NQMF guidelines",
+        "Credit history and payment patterns must be reviewed for program eligibility",
+        "Public records, collections, and derogatory credit must be identified and evaluated",
+        "Credit inquiries within 90 days require explanation per guideline (not DSCR loan)",
+        "Housing history verification may be needed if mortgage/rent payments not reflected on credit report"
+      ],
+      "satisfied_specifications": [
+        {
+          "specification": "Credit report must provide merged credit information from the 3 major national credit repositories",
+          "reason": "Credit scores present from all three bureaus: TransUnion (766), Experian (779), and Equifax (778), confirming merged three-bureau report."
+        },
+        {
+          "specification": "Credit reporting agency must be Experian, TransUnion, or Equifax",
+          "reason": "Report includes data from all three acceptable agencies: Experian, TransUnion, and Equifax."
+        },
+        {
+          "specification": "Credit report must certify the results of public record searches for each city where the individual has resided in the last 2 years",
+          "reason": "Confirmed clean \u2014 the publicRecords field is present with empty data, indicating none were found on this credit report."
+        },
+        {
+          "specification": "Credit report may not reflect a security freeze and must be resolved",
+          "reason": "No security freeze alert or indication present in the extracted fields; credit report was successfully generated and merged from all three bureaus."
+        },
+        {
+          "specification": "If a borrower unfreezes his or her credit after the date the original credit report was ordered, a new three-bureau merged report will be obtained to reflect current and updated information from all repositories",
+          "reason": "Not applicable \u2014 no security freeze is reflected in this credit report, so this conditional requirement does not apply."
+        },
+        {
+          "specification": "Housing Events and bankruptcies in the most recent 2 years must be explained by the borrower with a signed letter of explanation",
+          "reason": "Not applicable \u2014 no bankruptcies or adverse housing events are reflected in this credit report."
+        },
+        {
+          "specification": "If the disputed tradeline is paid as agreed, no further action is needed",
+          "reason": "Not applicable \u2014 no disputed tradelines are identified in this credit report."
+        },
+        {
+          "specification": "If the disputed account has a zero balance or is being paid at closing, no further action is needed",
+          "reason": "Not applicable \u2014 no disputed accounts are identified in this credit report."
+        },
+        {
+          "specification": "If the disputed account has delinquency within two years of the credit report date and the account balance is $2,500 or less, no further action is needed",
+          "reason": "Not applicable \u2014 no disputed delinquent accounts are identified in this credit report."
+        },
+        {
+          "specification": "If the disputed account has delinquency within two years of the credit report date and the account balance is over $2,500, the credit file should be documented with a credit supplement showing the dispute has been resolved",
+          "reason": "Not applicable \u2014 no disputed delinquent accounts with balances over $2,500 are identified in this credit report."
+        },
+        {
+          "specification": "A tri-merge or Residential Mortgage Credit Report (RMCR) is required for all borrowers on a loan",
+          "reason": "Tri-merge report confirmed \u2014 credit information merged from all three national repositories (TransUnion, Experian, Equifax) with scores of 766, 779, and 778 respectively."
+        },
+        {
+          "specification": "A valid Social Security number (SSN) is required for all borrowers on the loan",
+          "reason": "SSN present for primary borrower Mark Kashana (last 4: 5575) on the credit report; matches loan application borrower."
+        },
+        {
+          "specification": "A signed letter of explanation from the borrower is required for all inquiries within the most recent 90 days for debts not already shown on the credit report",
+          "reason": "Not applicable \u2014 report issued on 2026-09-08 is within the most recent 90 days, and the inquiries section contains empty data with no inquiry dates or details, indicating no inquiries within that window were found."
+        },
+        {
+          "specification": "If new credit was granted from inquiries within the most recent 90 days, documentation must be obtained to support the current balance and payment",
+          "reason": "Not applicable \u2014 no inquiries with details are reflected in this credit report, so no new credit from recent inquiries to document."
+        },
+        {
+          "specification": "Monthly payment for new credit from inquiries within the most recent 90 days must be included in the DTI",
+          "reason": "Not applicable \u2014 no inquiries within the most recent 90 days are identified on this credit report."
+        },
+        {
+          "specification": "Only the primary borrower must meet the tradeline requirements",
+          "reason": "Primary borrower Mark Kashana is the sole applicant with credit data on this report; no co-borrower credit information is present."
+        },
+        {
+          "specification": "Spouses may combine tradelines",
+          "reason": "Not applicable \u2014 only one borrower with credit data is present on this report; no spouse or co-borrower tradelines to combine."
+        },
+        {
+          "specification": "Credit lines on which the borrower is not obligated to make payments on are ineligible tradelines",
+          "reason": "Not applicable \u2014 no specific obligation-status disqualifications are identified in the tradeline details extracted."
+        },
+        {
+          "specification": "Deferred loans not requiring a payment are ineligible tradelines",
+          "reason": "Not applicable \u2014 no deferred loans requiring ineligibility review are identified in the extracted tradeline data."
+        },
+        {
+          "specification": "Authorized user accounts are ineligible tradelines",
+          "reason": "Not applicable \u2014 no authorized user account designations are reflected in the extracted credit tradeline data."
+        },
+        {
+          "specification": "Collections or charge-offs are ineligible tradelines",
+          "reason": "Confirmed clean \u2014 the collectionAccounts field is present with empty data, indicating no collections or charge-offs were found on this credit report."
+        },
+        {
+          "specification": "3 tradelines reporting for 12+ months with activity in the last 12 months, OR 2 tradelines reporting for 24+ months with activity in the last 12 months, OR 24 month mortgage history reporting on the credit report with a 0x30x12 history",
+          "reason": "Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report."
+        },
+        {
+          "specification": "The tradeline must be reflected on the borrower's credit report",
+          "reason": "Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report."
+        },
+        {
+          "specification": "Tradelines used to qualify may not exceed 0x60 in the most recent 12 months",
+          "reason": "Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report."
+        },
+        {
+          "specification": "An acceptable 12 or 24 month housing history not reporting on credit may be used as a tradeline",
+          "reason": "Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report."
+        }
+      ],
+      "document_ids": [
+        "ea70f479-637d-4af1-968f-17d08231902e"
+      ],
+      "display": {
+        "document_heading": "Credit Report",
+        "documentation_requirements": [
+          "Credit report must include verification of all credit references provided on the loan application.",
+          "The account must have been active in the past 12 months and may be opened or closed.",
+          "A supplement may be used to update the account activity."
+        ],
+        "reason_for_requirement": [
+          "The credit report is required to assess the borrower's creditworthiness, credit score, and credit history.",
+          "Credit score and tradeline requirements are program-specific and must be met to establish eligibility.",
+          "The report provides the basis for calculating the borrower's monthly debt obligations and debt-to-income ratio."
+        ],
+        "review_notes": [
+          "If the credit report is older than 120 days at the time of note signing, obtain an updated report.",
+          "If the borrower disputes any information on the credit report, obtain documentation supporting the dispute and resolution.",
+          "If the borrower does not meet the minimum tradeline requirements, alternative credit documentation may be required, subject to program guidelines."
+        ],
+        "satisfied_requirements": [
+          "Credit report must provide merged credit information from the 3 major national credit repositories \u2014 Credit scores present from all three bureaus: TransUnion (766), Experian (779), and Equifax (778), confirming merged three-bureau report.",
+          "Credit reporting agency must be Experian, TransUnion, or Equifax \u2014 Report includes data from all three acceptable agencies: Experian, TransUnion, and Equifax.",
+          "Credit report must certify the results of public record searches for each city where the individual has resided in the last 2 years \u2014 Confirmed clean \u2014 the publicRecords field is present with empty data, indicating none were found on this credit report.",
+          "Credit report may not reflect a security freeze and must be resolved \u2014 No security freeze alert or indication present in the extracted fields; credit report was successfully generated and merged from all three bureaus.",
+          "If a borrower unfreezes his or her credit after the date the original credit report was ordered, a new three-bureau merged report will be obtained to reflect current and updated information from all repositories \u2014 Not applicable \u2014 no security freeze is reflected in this credit report, so this conditional requirement does not apply.",
+          "Housing Events and bankruptcies in the most recent 2 years must be explained by the borrower with a signed letter of explanation \u2014 Not applicable \u2014 no bankruptcies or adverse housing events are reflected in this credit report.",
+          "If the disputed tradeline is paid as agreed, no further action is needed \u2014 Not applicable \u2014 no disputed tradelines are identified in this credit report.",
+          "If the disputed account has a zero balance or is being paid at closing, no further action is needed \u2014 Not applicable \u2014 no disputed accounts are identified in this credit report.",
+          "If the disputed account has delinquency within two years of the credit report date and the account balance is $2,500 or less, no further action is needed \u2014 Not applicable \u2014 no disputed delinquent accounts are identified in this credit report.",
+          "If the disputed account has delinquency within two years of the credit report date and the account balance is over $2,500, the credit file should be documented with a credit supplement showing the dispute has been resolved \u2014 Not applicable \u2014 no disputed delinquent accounts with balances over $2,500 are identified in this credit report.",
+          "A tri-merge or Residential Mortgage Credit Report (RMCR) is required for all borrowers on a loan \u2014 Tri-merge report confirmed \u2014 credit information merged from all three national repositories (TransUnion, Experian, Equifax) with scores of 766, 779, and 778 respectively.",
+          "A valid Social Security number (SSN) is required for all borrowers on the loan \u2014 SSN present for primary borrower Mark Kashana (last 4: 5575) on the credit report; matches loan application borrower.",
+          "A signed letter of explanation from the borrower is required for all inquiries within the most recent 90 days for debts not already shown on the credit report \u2014 Not applicable \u2014 report issued on 2026-09-08 is within the most recent 90 days, and the inquiries section contains empty data with no inquiry dates or details, indicating no inquiries within that window were found.",
+          "If new credit was granted from inquiries within the most recent 90 days, documentation must be obtained to support the current balance and payment \u2014 Not applicable \u2014 no inquiries with details are reflected in this credit report, so no new credit from recent inquiries to document.",
+          "Monthly payment for new credit from inquiries within the most recent 90 days must be included in the DTI \u2014 Not applicable \u2014 no inquiries within the most recent 90 days are identified on this credit report.",
+          "Only the primary borrower must meet the tradeline requirements \u2014 Primary borrower Mark Kashana is the sole applicant with credit data on this report; no co-borrower credit information is present.",
+          "Spouses may combine tradelines \u2014 Not applicable \u2014 only one borrower with credit data is present on this report; no spouse or co-borrower tradelines to combine.",
+          "Credit lines on which the borrower is not obligated to make payments on are ineligible tradelines \u2014 Not applicable \u2014 no specific obligation-status disqualifications are identified in the tradeline details extracted.",
+          "Deferred loans not requiring a payment are ineligible tradelines \u2014 Not applicable \u2014 no deferred loans requiring ineligibility review are identified in the extracted tradeline data.",
+          "Authorized user accounts are ineligible tradelines \u2014 Not applicable \u2014 no authorized user account designations are reflected in the extracted credit tradeline data.",
+          "Collections or charge-offs are ineligible tradelines \u2014 Confirmed clean \u2014 the collectionAccounts field is present with empty data, indicating no collections or charge-offs were found on this credit report.",
+          "3 tradelines reporting for 12+ months with activity in the last 12 months, OR 2 tradelines reporting for 24+ months with activity in the last 12 months, OR 24 month mortgage history reporting on the credit report with a 0x30x12 history \u2014 Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report.",
+          "The tradeline must be reflected on the borrower's credit report \u2014 Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report.",
+          "Tradelines used to qualify may not exceed 0x60 in the most recent 12 months \u2014 Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report.",
+          "An acceptable 12 or 24 month housing history not reporting on credit may be used as a tradeline \u2014 Confirmed clean \u2014 the creditTradeLines field is present with empty data, indicating none were found on this credit report."
+        ],
+        "document_ids": [
+          "ea70f479-637d-4af1-968f-17d08231902e"
+        ],
+        "party": "borrower"
+      },
+      "source_module": "04",
+      "tags": [
+        "credit"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Owner Occupancy Certification",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Borrower must intend to occupy the subject property for the majority of the year",
+        "Property must possess physical characteristics that accommodate the borrower's family",
+        "Property should be in the same general area as the borrower's employment, or additional documentation may be required at underwriter discretion to verify occupancy"
+      ],
+      "reasons_needed": [
+        {
+          "reason": "Occupancy certification is required to confirm primary residence status for owner-occupied property",
+          "reason_type": "guideline_requirement"
+        },
+        {
+          "reason": "Occupancy type determines LTV limits (85% max for primary residence on Flex Select), reserve requirements, and program eligibility",
+          "reason_type": "eligibility"
+        },
+        {
+          "reason": "Owner-occupied designation must be validated to ensure compliance with program guidelines and pricing",
+          "reason_type": "compliance"
+        }
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Owner Occupancy Certification",
+        "documentation_requirements": [
+          "Borrower must intend to occupy the subject property for the majority of the year.",
+          "Property must possess physical characteristics that accommodate the borrower's family.",
+          "Property should be in the same general area as the borrower's employment, or additional documentation may be required at underwriter discretion to verify occupancy."
+        ],
+        "reason_for_requirement": [
+          "Owner-occupancy status affects loan-to-value limits, pricing, and program eligibility.",
+          "Primary residence occupancy must be documented and certified by the borrower to support the selected loan program and LTV ratio.",
+          "Occupancy certification is required to ensure the loan is underwritten and priced correctly based on the borrower's intended use of the property."
+        ],
+        "review_notes": [
+          "If the borrower does not intend to occupy the property as a primary residence, the loan must be re-evaluated under investment property or second home guidelines.",
+          "Occupancy certification is typically obtained at or near closing.",
+          "If the subject property is located a significant distance from the borrower's place of employment, additional documentation or explanation may be required to support the occupancy intent."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "01",
+      "tags": [
+        "crosscutting"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Verification of Mortgage",
+      "document_category": "Credit",
+      "party": "borrower",
+      "priority": "P1",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Mortgage and rental payments not reflected on the credit report must be documented via an institutional Verification of Rent or Verification of Mortgage (VOR/VOM).",
+        "All mortgages and rental payments should be current at time of closing.",
+        "If the credit report or VOR/VOM reflects a past-due status, updated documentation is required to verify the account is current.",
+        "All months in which the borrower has rented and/or had a housing history must be documented."
+      ],
+      "reasons_needed": [
+        "Mortgage payment verification required for borrowers with existing real estate or an existing mortgage being refinanced"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Verification of Mortgage",
+        "documentation_requirements": [
+          "Mortgage and rental payments not reflected on the credit report must be documented via an institutional Verification of Rent or Verification of Mortgage (VOR/VOM).",
+          "All mortgages and rental payments should be current at time of closing.",
+          "If the credit report or VOR/VOM reflects a past-due status, updated documentation is required to verify the account is current.",
+          "All months in which the borrower has rented and/or had a housing history must be documented."
+        ],
+        "reason_for_requirement": [
+          "Verification of mortgage payment history is required to assess the borrower's housing payment performance and creditworthiness.",
+          "A satisfactory mortgage payment history demonstrates the borrower's ability to manage housing-related debt.",
+          "Mortgage payment history is a key factor in underwriting and may be used to satisfy tradeline requirements if not reported on the credit report."
+        ],
+        "review_notes": [
+          "If the mortgage payment history shows late payments in the most recent 12 months, additional explanation and compensating factors may be required.",
+          "Verification may be obtained via credit report, mortgage statement, or third-party verification service."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Emd Check",
+      "document_category": "Cross-Cutting",
+      "party": "borrower",
+      "priority": "P2",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Provide documentation satisfying the \"EMD Check\" requirement flagged by the eligibility engine for this program"
+      ],
+      "reasons_needed": [
+        "Program eligibility engine flagged this as a minimum required document category"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Emd Check",
+        "documentation_requirements": [
+          "Provide documentation satisfying the \"EMD Check\" requirement flagged by the eligibility engine for this program."
+        ],
+        "reason_for_requirement": [
+          "The earnest money deposit is part of the borrower's funds to close and must be documented and sourced.",
+          "Verification of the EMD ensures the borrower has made the required deposit and that the funds are from an acceptable source.",
+          "The EMD is typically credited toward the down payment and closing costs at settlement."
+        ],
+        "review_notes": [
+          "If the EMD was provided by a third party (e.g., gift donor, seller), obtain documentation of the gift or credit and ensure it complies with program guidelines.",
+          "If the EMD check was returned or not deposited, obtain an explanation and updated documentation."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Profit and Loss",
+      "document_category": "Income",
+      "party": "borrower",
+      "priority": "P2",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Tax Preparers must have a PTIN Number when available",
+        "If the state does not require a PTIN Number, it must be from a verifiable 3rd party tax preparer (verified by a business through the internet or state website)",
+        "CPA license verification must be completed through an online search such as https://cpaverify.org/",
+        "If unable to verify CPA license online, sufficient documentation must be provided to validate the license",
+        "P&L must be 12 or 24 months in duration",
+        "P&L must be prepared and signed by CPA/EA or PTIN licensed tax preparer",
+        "P&L must be dated within 90 days of the application date",
+        "CPA/EA/PTIN licensed tax preparer must attest to the fact they have prepared the borrower's most recent tax returns",
+        "Qualifying income is the monthly net income from the P&L divided by the number of months covered by the P&L",
+        "Depreciation, depletion and amortization/casualty losses listed on the P&L may be added back to the applicant's income",
+        "When evaluating the P&L, the expenses are expected to be at least 20% of gross revenue",
+        "In the event less than 20% is reflected in expenses, the net income will be adjusted to reflect a 20% expense level when qualifying",
+        "FNMA Liquidity Test is not required",
+        "A borrower is considered self-employed with 25% or more ownership interest in a business",
+        "Originators must verify the borrower's self-employment for the most recent consecutive two (2) full years in the same business",
+        "It is considered acceptable when the self-employment business filing has changed (example: sole proprietorship to corporation), provided the business name and ownership percentage have remained the same and the business has been in existence for the most recent consecutive two (2) full years",
+        "Borrowers receiving 1099 income (filing as Schedule C or E) are eligible provided that the 1099 income is from the same source, covering the most recent two (2) full years"
+      ],
+      "reasons_needed": [
+        "Required when tax return date is more than 120 days from Note Date per NQMF guidelines",
+        "YTD P&L is used to determine stability of income shown on tax returns",
+        "Validates that self-employment income trend remains consistent with historical tax returns",
+        "Supplementary document to support current business performance",
+        "Required for Full Documentation self-employed borrowers per guidelines"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Profit and Loss",
+        "documentation_requirements": [
+          "Tax Preparers must have a PTIN Number when available.",
+          "If the state does not require a PTIN Number, it must be from a verifiable 3rd party tax preparer (verified by a business through the internet or state website).",
+          "CPA license verification must be completed through an online search such as https://cpaverify.org/.",
+          "If unable to verify CPA license online, sufficient documentation must be provided to validate the license.",
+          "P&L must be 12 or 24 months in duration.",
+          "P&L must be prepared and signed by CPA/EA or PTIN licensed tax preparer.",
+          "P&L must be dated within 90 days of the application date.",
+          "CPA/EA/PTIN licensed tax preparer must attest to the fact they have prepared the borrower's most recent tax returns.",
+          "Qualifying income is the monthly net income from the P&L divided by the number of months covered by the P&L.",
+          "Depreciation, depletion and amortization/casualty losses listed on the P&L may be added back to the applicant's income.",
+          "When evaluating the P&L, the expenses are expected to be at least 20% of gross revenue.",
+          "In the event less than 20% is reflected in expenses, the net income will be adjusted to reflect a 20% expense level when qualifying.",
+          "FNMA Liquidity Test is not required.",
+          "A borrower is considered self-employed with 25% or more ownership interest in a business.",
+          "Originators must verify the borrower's self-employment for the most recent consecutive two (2) full years in the same business.",
+          "It is considered acceptable when the self-employment business filing has changed (example: sole proprietorship to corporation), provided the business name and ownership percentage have remained the same and the business has been in existence for the most recent consecutive two (2) full years.",
+          "Borrowers receiving 1099 income (filing as Schedule C or E) are eligible provided that the 1099 income is from the same source, covering the most recent two (2) full years."
+        ],
+        "reason_for_requirement": [
+          "A current year-to-date profit and loss statement is required to assess the ongoing financial performance of the self-employed borrower's business.",
+          "The statement provides interim income data to bridge the gap between the most recent filed tax return and the current loan application date.",
+          "Year-to-date income must be analyzed for consistency with prior-year tax returns to confirm income stability and continuity."
+        ],
+        "review_notes": [
+          "If the year-to-date profit and loss statement shows a significant decline in income compared to prior years, additional explanation and documentation may be required.",
+          "The statement should be consistent with the business's historical income trends and industry norms.",
+          "Verify the CPA/EA/PTIN preparer's license through online verification (e.g., cpaverify.org) or other acceptable means."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "02",
+      "tags": [
+        "income"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Balance Sheet",
+      "document_category": "Income",
+      "party": "borrower",
+      "priority": "P2",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [],
+      "reasons_needed": [
+        "Supplementary document for self-employed income verification",
+        "Validates business financial health and continuity",
+        "Supports overall business stability assessment",
+        "Required when YTD P&L is provided to give complete financial picture"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Balance Sheet",
+        "documentation_requirements": [
+          "Obtain a current balance sheet for the borrower's self-employed business (Kashana Enterprises LLC).",
+          "Verify the balance sheet includes all assets, liabilities, and equity accounts.",
+          "Confirm the balance sheet is dated within 90 days of the loan application date.",
+          "Ensure the balance sheet is prepared and signed by a CPA, licensed accountant, or the business owner."
+        ],
+        "reason_for_requirement": [
+          "A balance sheet is required to assess the financial position and solvency of the self-employed borrower's business entity.",
+          "The balance sheet provides a snapshot of the business's assets, liabilities, and net worth, which supports the underwriter's analysis of business stability and continuity.",
+          "Balance sheet data may be used to evaluate the borrower's access to business funds for closing or reserves."
+        ],
+        "review_notes": [
+          "If the balance sheet shows negative equity or significant liabilities, additional explanation and documentation may be required to support the borrower's income and financial capacity.",
+          "The balance sheet should be consistent with the business tax returns and profit and loss statement."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "02",
+      "tags": [
+        "income"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Verification of Deposit",
+      "document_category": "Assets",
+      "party": "borrower",
+      "priority": "P2",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Certificates of Deposits are eligible for closing costs, reserves, or asset utilization.",
+        "Certificate of Deposit value must be calculated at 100% of the pre-maturity surrendering value of the CD, minus any penalty that has been accumulated upon early withdrawal."
+      ],
+      "reasons_needed": [
+        "Transaction is a purchase (not refinance) requiring earnest money deposit verification",
+        "EMD must be sourced from borrower's acceptable funds per asset verification requirements",
+        "EMD amount must be verified and credited toward funds to close calculation",
+        "Source of EMD must be traced to ensure funds came from verified borrower accounts",
+        "Purchase contract requires EMD verification to confirm deposit was made and properly credited"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Verification of Deposit",
+        "documentation_requirements": [
+          "Certificates of Deposits are eligible for closing costs, reserves, or asset utilization.",
+          "Certificate of Deposit value must be calculated at 100% of the pre-maturity surrendering value of the CD, minus any penalty that has been accumulated upon early withdrawal."
+        ],
+        "reason_for_requirement": [
+          "Verification of deposit is required to independently confirm the existence and balance of the borrower's asset accounts.",
+          "VOD provides third-party verification of the borrower's liquid assets and supports the asset documentation submitted by the borrower.",
+          "VOD may be used in lieu of or in addition to bank statements, depending on program requirements."
+        ],
+        "review_notes": [
+          "If the VOD balance differs significantly from the borrower's submitted bank statements, obtain an explanation and reconcile the discrepancy.",
+          "Electronic verification of assets (e.g., via third-party verification service) may be used as an alternative to traditional VOD, subject to program guidelines."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "03",
+      "tags": [
+        "assets"
+      ],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    },
+    {
+      "document_type": "Title Invoice",
+      "document_category": "Title",
+      "party": "borrower",
+      "priority": "P2",
+      "severity": "SOFT-STOP",
+      "status": "needed",
+      "specifications": [
+        "Itemized title/closing fees from the title company",
+        "Matches fees disclosed on the Closing Disclosure/Loan Estimate"
+      ],
+      "reasons_needed": [
+        "Program eligibility requires the title company's itemized invoice"
+      ],
+      "satisfied_specifications": [],
+      "document_ids": [],
+      "display": {
+        "document_heading": "Title Invoice",
+        "documentation_requirements": [
+          "Itemized title/closing fees from the title company.",
+          "Matches fees disclosed on the Closing Disclosure/Loan Estimate."
+        ],
+        "reason_for_requirement": [
+          "The title invoice is required to document the costs associated with obtaining title insurance and completing the title work.",
+          "The invoice ensures transparency and accuracy in the calculation of the borrower's closing costs.",
+          "Title fees must be reasonable and customary for the area and transaction type."
+        ],
+        "review_notes": [
+          "If the title fees exceed the borrower's estimate or are unusually high, obtain an explanation from the title company and verify the fees are reasonable.",
+          "The title invoice is typically provided at or near closing."
+        ],
+        "satisfied_requirements": [],
+        "document_ids": [],
+        "party": "borrower"
+      },
+      "source_module": "deterministic",
+      "tags": [],
+      "applicable_parties": [
+        "Mark Kashana"
+      ],
+      "description": "",
+      "guideline_reference": ""
+    }
+  ],
+  "scenario_summary": {
+    "program": "Flex Select",
+    "product_variant": "Conventional",
+    "purpose": "Purchase",
+    "occupancy": "OO",
+    "property": {
+      "address": "303 DEWANE DR",
+      "state": "CA",
+      "county": "San Diego",
+      "city": "EL CAJON",
+      "zip": "92020",
+      "units": 1,
+      "property_type": "SFR",
+      "year_built": 1976.0,
+      "rural_property": null
+    },
+    "numbers": {
+      "loan_amount": 602000,
+      "purchase_price": 860000.0,
+      "appraised_value": 860000.0,
+      "note_rate": 6.749,
+      "LTV": 70,
+      "CLTV": 70,
+      "DTI": 28
+    },
+    "loan_terms": {
+      "amortization_type": "Fixed",
+      "term_months": 360.0,
+      "interest_only": false,
+      "prepay_penalty": false,
+      "balloon": false,
+      "lien_priority": "First Lien"
+    },
+    "credit": {
+      "fico": 778,
+      "credit_scores": [],
+      "fico_source": "loan_profile",
+      "is_us_credit": null,
+      "mortgage_history_flags": [],
+      "credit_events": [
+        "none"
+      ],
+      "declarations": {
+        "BankruptcyIndicator": false,
+        "CitizenshipResidencyType": "USCitizen",
+        "FHASecondaryResidenceIndicator": false,
+        "HomeownerPastThreeYearsType": false,
+        "IntentToOccupyType": true,
+        "OutstandingJudgmentsIndicator": false,
+        "PartyToLawsuitIndicator": false,
+        "PresentlyDelinquentIndicator": false,
+        "PriorPropertyDeedInLieuConveyedIndicator": false,
+        "PriorPropertyForeclosureCompletedIndicator": false,
+        "PriorPropertyShortSaleCompletedIndicator": false,
+        "PropertyProposedCleanEnergyLienIndicator": false,
+        "UndisclosedBorrowedFundsIndicator": false,
+        "UndisclosedComakerOfNoteIndicator": false,
+        "UndisclosedCreditApplicationIndicator": false,
+        "UndisclosedMortgageApplicationIndicator": false
+      }
+    },
+    "borrowers": [
+      {
+        "name": "Mark Kashana",
+        "ssn": "681945575",
+        "dob": "1984-01-06",
+        "role": "primary",
+        "self_employed": true,
+        "citizenship": "US Citizen",
+        "military": false
+      }
+    ],
+    "income_profile": {
+      "income_types": [
+        "W2"
+      ],
+      "primary_income_type": "W2",
+      "income_doc_label": "Full Doc: 12 Mo. (Limited)",
+      "secondary_income": null,
+      "secondary_income_doc": null
+    },
+    "asset_profile": {
+      "has_bank_statements": false,
+      "has_large_deposit_flags": false,
+      "has_gift_indicators": false,
+      "has_reserves_indicators": false,
+      "months_reserves": null,
+      "total_liquid_assets": null,
+      "total_investment_assets": null,
+      "total_retirement_assets": null
+    },
+    "reo_summary": {
+      "total_properties_owned": 2,
+      "total_lien_balance": null,
+      "subject_property_rental_income": null
+    },
+    "doc_profile": [
+      "purchase_contract",
+      "other",
+      "credit_report"
+    ],
+    "housing_expenses": {
+      "present": [
+        {
+          "type": "OtherMortgageLoanPrincipalAndInterest",
+          "amount": 5349.0
+        }
+      ],
+      "proposed": [
+        {
+          "type": "FirstMortgagePrincipalAndInterest",
+          "amount": 3904.16
+        },
+        {
+          "type": "HomeownersInsurance",
+          "amount": 150.0
+        },
+        {
+          "type": "RealEstateTax",
+          "amount": 895.83
+        },
+        {
+          "type": "HomeownersAssociationDuesAndCondominiumFees",
+          "amount": 155.0
+        },
+        {
+          "type": "Other",
+          "amount": 0.0
+        }
+      ]
+    },
+    "cash_out_amount": null,
+    "channel": null,
+    "loan_number": "2549004Z576VEJBK3N729201021738453",
+    "dscr_label": null,
+    "borrower_type": "Self-Employed",
+    "employers": [
+      {
+        "name": "SAM 2 Auto Repair",
+        "position": "MI",
+        "start_date": "2019-04-01",
+        "status": "Current",
+        "classification": "Primary",
+        "self_employed": true,
+        "months_in_line": null,
+        "ownership_interest": null
+      }
+    ],
+    "residences": [
+      {
+        "address": "1342 Orange Grove Road",
+        "city": "El Cajon",
+        "state": "CA",
+        "zip": "92021",
+        "basis": "Own",
+        "type": "Current",
+        "duration_months": 36.0,
+        "monthly_rent": null
+      }
+    ],
+    "assets": [
+      {
+        "type": "CheckingAccount",
+        "value": 140000.0,
+        "account_id": null,
+        "holder": "Chase"
+      },
+      {
+        "type": "CheckingAccount",
+        "value": 15107.0,
+        "account_id": null,
+        "holder": "WF"
+      },
+      {
+        "type": "GiftOfCash",
+        "value": 150000.0,
+        "account_id": null,
+        "holder": null
+      },
+      {
+        "type": null,
+        "value": null,
+        "account_id": null,
+        "holder": null
+      },
+      {
+        "type": null,
+        "value": null,
+        "account_id": null,
+        "holder": null
+      }
+    ],
+    "liabilities": [
+      {
+        "type": "MortgageLoan",
+        "monthly_payment": 5349.0,
+        "unpaid_balance": 601558.0,
+        "payoff_status": "false",
+        "holder": "ROCKET MTG",
+        "excluded": false,
+        "remaining_months": 320.0,
+        "account_id": "742914526"
+      },
+      {
+        "type": "MortgageLoan",
+        "monthly_payment": 1460.0,
+        "unpaid_balance": 191865.0,
+        "payoff_status": "false",
+        "holder": "ONITY MORTGAGE CORPORA",
+        "excluded": false,
+        "remaining_months": 296.0,
+        "account_id": "9547118807838"
+      },
+      {
+        "type": "Revolving",
+        "monthly_payment": 104.0,
+        "unpaid_balance": 7613.0,
+        "payoff_status": "false",
+        "holder": "PREFERRED CREDIT INC",
+        "excluded": false,
+        "remaining_months": 74.0,
+        "account_id": "2796763"
+      },
+      {
+        "type": "Revolving",
+        "monthly_payment": 25.0,
+        "unpaid_balance": 323.0,
+        "payoff_status": "false",
+        "holder": "WFBNA CARD",
+        "excluded": false,
+        "remaining_months": 13.0,
+        "account_id": "446540007165"
+      }
+    ],
+    "owned_properties": [
+      {
+        "address": "1342 Orange Grove Road",
+        "value": 880000.0,
+        "lien_upb": 601558.0,
+        "rental_income": -849.0,
+        "disposition": "Retain",
+        "is_subject": false,
+        "property_usage": "PrimaryResidence",
+        "state": "CA",
+        "city": "El Cajon"
+      },
+      {
+        "address": "851 South Mollison Avenue",
+        "value": 450000.0,
+        "lien_upb": 191865.0,
+        "rental_income": -355.92,
+        "disposition": "Retain",
+        "is_subject": false,
+        "property_usage": "Investment",
+        "state": "CA",
+        "city": "El Cajon"
+      }
+    ],
+    "eligible_programs": [
+      "Flex Select",
+      "Flex Supreme"
+    ],
+    "ineligible_programs": [
+      "DSCR Multi (5-8 Units)",
+      "Foreign National",
+      "Investor DSCR",
+      "Select ITIN",
+      "Super Jumbo",
+      "2nd Lien",
+      "DSCR Supreme Program",
+      "Investor DSCR No Ratio"
+    ],
+    "program_eligibility_detail": {
+      "2nd Lien": {
+        "status": "FAIL",
+        "passed_count": 11,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Loantype",
+            "message": "LoanType must be Closed End Second for 2nd Lien program"
+          }
+        ]
+      },
+      "Select ITIN": {
+        "status": "FAIL",
+        "passed_count": 1,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Citizenship",
+            "message": "US Citizens are not eligible for Select ITIN program."
+          }
+        ]
+      },
+      "Super Jumbo": {
+        "status": "FAIL",
+        "passed_count": 8,
+        "failed_count": 2,
+        "failed_rules": [
+          {
+            "requirement": "Min Loan Amount",
+            "message": "Loan amount $602,000 below minimum requirement $3,500,001"
+          },
+          {
+            "requirement": "Max Loan-To-Value (Matrix)",
+            "message": "Loan amount $602,000 below minimum $4,500,001 for FICO Score 778, Primary Residence, SFR"
+          }
+        ]
+      },
+      "Investor DSCR": {
+        "status": "FAIL",
+        "passed_count": 1,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Income Documentation Type",
+            "message": "Income Doc Type \"Full Doc: 12 Mo. (Limited)\" (Primary) is not a DSCR type - Investor DSCR requires a DSCR income documentation type - FAIL"
+          }
+        ]
+      },
+      "Foreign National": {
+        "status": "FAIL",
+        "passed_count": 7,
+        "failed_count": 2,
+        "failed_rules": [
+          {
+            "requirement": "Max Loan-To-Value (Matrix Evaluation)",
+            "message": "Occupancy 'Primary Residence' not eligible for Foreign National. Available: Investment Property, Second Home"
+          },
+          {
+            "requirement": "Borrower Eligibility - Foreign National",
+            "message": "US Citizens are not eligible for Foreign National program - FAIL"
+          }
+        ]
+      },
+      "Flex Select": {
+        "status": "PASS",
+        "passed_count": 12,
+        "failed_count": 0,
+        "failed_rules": []
+      },
+      "DSCR Supreme Program": {
+        "status": "FAIL",
+        "passed_count": 1,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Income Documentation Type",
+            "message": "Income Doc Type \"Full Doc: 12 Mo. (Limited)\" (Primary) is not a DSCR type - DSCR Supreme Program requires a DSCR income documentation type - FAIL"
+          }
+        ]
+      },
+      "Flex Supreme": {
+        "status": "PASS",
+        "passed_count": 12,
+        "failed_count": 0,
+        "failed_rules": []
+      },
+      "DSCR Multi (5-8 Units)": {
+        "status": "FAIL",
+        "passed_count": 1,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Income Documentation Type",
+            "message": "Income Doc Type \"Full Doc: 12 Mo. (Limited)\" (Primary) is not a DSCR type - DSCR Multi (5-8 Units) requires a DSCR income documentation type - FAIL"
+          }
+        ]
+      },
+      "Investor DSCR No Ratio": {
+        "status": "FAIL",
+        "passed_count": 1,
+        "failed_count": 1,
+        "failed_rules": [
+          {
+            "requirement": "Income Documentation Type",
+            "message": "Income Doc Type \"Full Doc: 12 Mo. (Limited)\" (Primary) is not a DSCR type - Investor DSCR No Ratio requires a DSCR income documentation type - FAIL"
+          }
+        ]
+      }
+    },
+    "eligibility_extra": {
+      "FirstTimeHomeBuyer": false
+    },
+    "is_fthb": false
+  }
+}

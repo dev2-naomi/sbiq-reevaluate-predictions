@@ -51,10 +51,15 @@ def run(predicted_path: Path, manifest_path: Path, output_dir: Path | None = Non
         "current_step": "STEP_00",
     }
 
-    model_name = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-20250514")
+    provider = os.environ.get("LLM_PROVIDER", "openai").lower()
+    if provider == "openai":
+        model_name = os.environ.get("OPENAI_MODEL", "gpt-4o")
+    else:
+        model_name = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-20250514")
     print("=" * 70)
     print("  Reevaluate Preconditions Pipeline")
     print("=" * 70)
+    print(f"  Provider: {provider}")
     print(f"  Model: {model_name}")
     print(f"  Predicted: {predicted_path.name}")
     print(f"  Manifest: {manifest_path.name}")

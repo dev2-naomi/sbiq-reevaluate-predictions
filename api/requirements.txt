@@ -1,0 +1,19 @@
+# Lambda container dependencies — mirrors the root requirements.txt (the
+# agent code needs the full dependency set, not just a slim API layer) plus
+# the AWS/API-only additions.
+langgraph>=0.2.0
+langchain-anthropic>=0.3.0
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+pydantic>=2.0.0
+typing_extensions>=4.9.0
+python-dotenv>=1.0.0
+boto3>=1.34.0
+
+# API / AWS additions (not needed by langgraph dev, only by the Lambda shim).
+# No mangum here — served via the Lambda Web Adapter extension (see
+# api/Dockerfile), which talks HTTP directly to uvicorn; a Python-level
+# Lambda "handler" function is not part of this architecture at all.
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+langgraph-checkpoint-aws>=0.1.0

@@ -1,0 +1,43 @@
+# ── Dev-only directories (not needed at runtime) ──
+/plans/README.md
+/data
+/test_results
+/nyarko_reeval
+/venv
+/agent-transcripts
+
+# Git and IDE
+.git
+.gitignore
+.cursor
+.vscode
+
+# Python caches
+__pycache__
+*.py[cod]
+*.egg-info
+.eggs
+
+# Dev files
+*.log
+.DS_Store
+
+# Root-level test/debug artifacts (keep only requirements.txt)
+/test_pipeline.py
+/test_cloud.py
+/nyarko_reeval_final_state_reevaluated.json
+
+# Docker files (root-anchored — do NOT exclude api/Dockerfile, which the
+# AWS Lambda build in infra/stacks/reevaluate_stack.py needs in the build
+# context)
+/Dockerfile
+/docker-compose.yml
+
+# AWS Lambda / CDK build artifacts (not needed inside the image)
+/infra/.venv
+/infra/cdk.out
+/.venv
+
+# langgraph dev's local checkpoint store (irrelevant to the Lambda image,
+# which uses DynamoDB via checkpointer.py)
+/.langgraph_api
