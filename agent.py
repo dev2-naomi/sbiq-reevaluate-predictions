@@ -78,26 +78,83 @@ class ReevaluateState(TypedDict, total=False):
 # LLM
 # ---------------------------------------------------------------------------
 
-# LLM_PROVIDER selects which backend to use ("anthropic" or "openai").
-# Defaults to "openai" since the Anthropic key is currently invalid; flip
-# back to "anthropic" (or unset) once that key is restored.
-_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").lower()
+# LLM_PROVIDER selects which backend to use ("openrouter" | "anthropic" |
+# "openai"). Defaults to "openrouter" — ported from the predicted-conditions
+# repo's PRIMARY_PROVIDER=openrouter support (see
+# docs/openrouter-integration.md and that repo's agent.py ~2026-11-07/11-19
+# history). OpenRouter is an OpenAI-compatible proxy in front of Claude (or
+# other models), reached via a key that's independent of the direct
+# Anthropic/OpenAI account keys — useful since both of those have had
+# issues (revoked/invalid) in the past on this project too.
+_PROVIDER = os.environ.get("LLM_PROVIDER", "openrouter").lower()
 _SYSTEM_PROMPT = load_system_prompt()
 
-if _PROVIDER == "openai":
+# Per-request network timeout (seconds) and sampling temperature, shared by
+# whichever client is constructed below. Same defaults as
+# predicted-conditions (docs/openrouter-integration.md §3).
+_LLM_TIMEOUT_SECONDS = float(os.environ.get("LLM_TIMEOUT_SECONDS", "90"))
+_LLM_TEMPERATURE = os.environ.get("LLM_TEMPERATURE", "0.2")
+
+if _PROVIDER == "openrouter":
+    if ChatOpenAI is None:
+        raise RuntimeError(
+            "LLM_PROVIDER=openrouter but langchain-openai is not installed. "
+            "Run `pip install langchain-openai`."
+        )
+    _MODEL = os.environ.get("OPENROUTER_MODEL", "anthropic/claude-sonnet-5.5")
+    _or_kwargs: dict = {
+        "model": _MODEL,
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key": os.environ.get("OPENROUTER_API_KEY"),
+        # Explicit cap — left unset, OpenRouter defaults to the model's
+        # theoretical max output (65536 for claude-sonnet-5.5), which
+        # inflates the request's "required credits" preflight estimate and
+        # can trigger a 402 regardless of actual remaining balance. See
+        # docs/openrouter-integration.md §5 for the full 402 deep-dive —
+        # as of 2026-11-19 the shared org credit balance is nearly
+        # exhausted, so this cap matters more than usual right now.
+        "max_tokens": int(os.environ.get("OPENROUTER_MAX_TOKENS", "16384")),
+        "max_retries": 0,
+        "timeout": _LLM_TIMEOUT_SECONDS,
+        "temperature": float(_LLM_TEMPERATURE),
+    }
+    # claude-sonnet-5.5 has MANDATORY reasoning on OpenRouter — if
+    # reasoning_effort is left unset, OpenRouter defaults it to "high",
+    # which is both slow and expensive. Default "low" per
+    # predicted-conditions' measured cost/reliability tradeoff (see
+    # docs/openrouter-integration.md §4). NOTE: that repo also had to add a
+    # stall-recovery nudge mechanism because "low" effort occasionally lets
+    # the model stop mid-workflow without finishing its tool-call sequence.
+    # This agent has no equivalent nudge yet — its workflow is much shorter
+    # (STEP_00-02 vs. STEP_00-09), which lowers the risk, but has not been
+    # load-tested here. Re-validate if stalls are observed.
+    _or_effort = os.environ.get("OPENROUTER_REASONING_EFFORT", "low")
+    if _or_effort:
+        _or_kwargs["reasoning_effort"] = _or_effort
+    _llm = ChatOpenAI(**_or_kwargs)
+elif _PROVIDER == "openai":
     if ChatOpenAI is None:
         raise RuntimeError(
             "LLM_PROVIDER=openai but langchain-openai is not installed. "
             "Run `pip install langchain-openai`."
         )
     _MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.1")
-    _llm = ChatOpenAI(model=_MODEL, max_tokens=16384)
+    _llm = ChatOpenAI(model=_MODEL, max_tokens=16384, timeout=_LLM_TIMEOUT_SECONDS)
 else:
     _MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-20250514")
-    _llm_kwargs: dict = {"model": _MODEL, "max_tokens": 16384}
+    _llm_kwargs: dict = {"model": _MODEL, "max_tokens": 16384, "timeout": _LLM_TIMEOUT_SECONDS}
     if "opus" in _MODEL:
         _llm_kwargs["thinking"] = {"type": "enabled", "budget_tokens": 8192}
+    else:
+        _llm_kwargs["temperature"] = float(_LLM_TEMPERATURE)
     _llm = ChatAnthropic(**_llm_kwargs)
+
+# NOTE on tool_choice: orchestrator_node() below binds tools with plain
+# llm.bind_tools(step_tools) (auto tool choice) — it never forces
+# tool_choice="required". That's the one OpenAI-primary quirk documented in
+# predicted-conditions (forced tool_choice is OpenAI-only there, and Claude
+# via OpenRouter rejects it outright) that does NOT need a special case
+# here, since this agent never forces tool_choice for any provider.
 
 
 # ---------------------------------------------------------------------------

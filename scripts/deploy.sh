@@ -80,7 +80,7 @@ with open('$ROOT/aws-output.json', encoding='utf-8') as f:
     print(json.load(f).get('$STACK_ID.AgentSecretsArn', ''))
 " 2>/dev/null || true)"
 
-if [[ -n "$SECRET_ARN" && ( -n "${ANTHROPIC_API_KEY:-}" || -n "${OPENAI_API_KEY:-}" ) ]]; then
+if [[ -n "$SECRET_ARN" && ( -n "${ANTHROPIC_API_KEY:-}" || -n "${OPENAI_API_KEY:-}" || -n "${OPENROUTER_API_KEY:-}" ) ]]; then
   echo "Pushing secret values to Secrets Manager ($SECRET_ARN)..."
   SECRET_PAYLOAD_FILE="$(mktemp)"
   python3 - <<PY > "$SECRET_PAYLOAD_FILE"
@@ -93,6 +93,15 @@ print(json.dumps({
     "ANTHROPIC_MODEL": os.environ.get("ANTHROPIC_MODEL", ""),
     "OPENAI_API_KEY": os.environ.get("OPENAI_API_KEY", ""),
     "OPENAI_MODEL": os.environ.get("OPENAI_MODEL", ""),
+    # Added 2026-11-19 alongside LLM_PROVIDER=openrouter support — keep in
+    # sync with infra/stacks/reevaluate_stack.py:secret_keys and
+    # api/secrets.py:SECRET_KEYS.
+    "OPENROUTER_API_KEY": os.environ.get("OPENROUTER_API_KEY", ""),
+    "OPENROUTER_MODEL": os.environ.get("OPENROUTER_MODEL", ""),
+    "OPENROUTER_REASONING_EFFORT": os.environ.get("OPENROUTER_REASONING_EFFORT", ""),
+    "OPENROUTER_MAX_TOKENS": os.environ.get("OPENROUTER_MAX_TOKENS", ""),
+    "LLM_TIMEOUT_SECONDS": os.environ.get("LLM_TIMEOUT_SECONDS", ""),
+    "LLM_TEMPERATURE": os.environ.get("LLM_TEMPERATURE", ""),
     "LANGCHAIN_API_KEY": os.environ.get("LANGCHAIN_API_KEY", ""),
     "LANGCHAIN_TRACING_V2": os.environ.get("LANGCHAIN_TRACING_V2", ""),
     "LANGCHAIN_PROJECT": os.environ.get("LANGCHAIN_PROJECT", ""),

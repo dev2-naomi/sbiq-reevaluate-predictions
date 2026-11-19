@@ -107,6 +107,14 @@ class ReevaluatePreconditionsStack(Stack):
             "LANGCHAIN_TRACING_V2",
             "LANGCHAIN_PROJECT",
             "API_KEY",
+            # Added 2026-11-19 alongside LLM_PROVIDER=openrouter support in
+            # agent.py (ported from predicted-conditions).
+            "OPENROUTER_API_KEY",
+            "OPENROUTER_MODEL",
+            "OPENROUTER_REASONING_EFFORT",
+            "OPENROUTER_MAX_TOKENS",
+            "LLM_TIMEOUT_SECONDS",
+            "LLM_TEMPERATURE",
         ]
         agent_secrets = secretsmanager.Secret(
             self,

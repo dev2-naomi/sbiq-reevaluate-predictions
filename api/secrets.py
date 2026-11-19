@@ -32,6 +32,15 @@ SECRET_KEYS = (
     "LANGCHAIN_TRACING_V2",
     "LANGCHAIN_PROJECT",
     "API_KEY",
+    # Added 2026-11-19 alongside LLM_PROVIDER=openrouter support in
+    # agent.py (ported from predicted-conditions, which keeps the
+    # equivalent set in sync via infra/stacks/predicted_conditions_stack.py).
+    "OPENROUTER_API_KEY",
+    "OPENROUTER_MODEL",
+    "OPENROUTER_REASONING_EFFORT",
+    "OPENROUTER_MAX_TOKENS",
+    "LLM_TIMEOUT_SECONDS",
+    "LLM_TEMPERATURE",
 )
 
 
