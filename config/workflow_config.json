@@ -29,6 +29,7 @@
       "description": "For each document request, find matching manifest documents and evaluate which specifications are satisfied by the manifest data.",
       "plan_file": "step_01_evaluate.md",
       "substeps": [
+        { "id": "1.0", "name": "View parsed document requests and manifest", "tools": ["view_parsed_data"] },
         { "id": "1.1", "name": "Evaluate all document requests against manifest", "tools": ["evaluate_specifications"] },
         { "id": "1.2", "name": "Save step report", "tools": ["save_step_report"] }
       ]

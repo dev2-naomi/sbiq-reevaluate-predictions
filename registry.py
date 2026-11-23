@@ -40,8 +40,15 @@ STEP_CONFIG: dict[str, dict[str, Any]] = {
     "STEP_01": {
         "name": "Specification Evaluator",
         "plan_file": "step_01_evaluate.md",
-        "tools": ["evaluate_specifications"],
+        "tools": ["view_parsed_data", "evaluate_specifications"],
         "substeps": [
+                {
+                        "id": "1.0",
+                        "name": "View parsed document requests and manifest",
+                        "tools": [
+                                "view_parsed_data"
+                        ]
+                },
                 {
                         "id": "1.1",
                         "name": "Evaluate all document requests against manifest",

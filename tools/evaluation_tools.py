@@ -32,6 +32,49 @@ def _as_list(val: Any) -> list:
 
 
 @tool
+def view_parsed_data(
+    state: Annotated[dict, InjectedState] = None,
+) -> dict:
+    """
+    Return the parsed document_requests and manifest_docs content so you can
+    actually read the documentation_requirements text and extracted_fields
+    before evaluating.
+
+    Call this first if you haven't seen this data in the conversation yet —
+    parse_predicted_conditions/parse_manifest (STEP_00) only emit short
+    count/type summaries as their tool output, never the full content. The
+    real data lives in graph state, and this is the only tool that surfaces
+    it back to you.
+    """
+    s = state or {}
+    document_requests = _as_list(s.get("document_requests", []))
+    manifest_docs = _as_list(s.get("manifest_docs", []))
+
+    requests_view = []
+    for dr in document_requests:
+        display = dr.get("display", {}) or {}
+        requests_view.append({
+            "document_type": dr.get("document_type"),
+            "status": dr.get("status"),
+            "documentation_requirements": display.get("documentation_requirements", []),
+            "satisfied_requirements": display.get("satisfied_requirements", []),
+        })
+
+    manifest_view = [
+        {
+            "detected_document_type": m.get("detected_document_type"),
+            "extracted_fields": m.get("extracted_fields", {}),
+        }
+        for m in manifest_docs
+    ]
+
+    return {
+        "document_requests": requests_view,
+        "manifest_docs": manifest_view,
+    }
+
+
+@tool
 def evaluate_specifications(
     evaluations: list[dict],
     tool_call_id: Annotated[str, InjectedToolCallId] = "",
@@ -44,8 +87,19 @@ def evaluate_specifications(
     For each document request, look at display.documentation_requirements, check
     them against the manifest, and report which ones (by index) are satisfied.
 
+    This tool pulls document_requests and manifest_docs directly from graph
+    state and ALWAYS runs deterministic keyword/alias matching over every
+    document request regardless of what you pass in `evaluations`. It is
+    always safe to call — even with `evaluations=[]` — because the
+    deterministic pass is the primary mechanism and your input only
+    supplements borderline cases you're confident about. Never skip calling
+    this tool because you're unsure what the exact requirement text is; call
+    `view_parsed_data` first if you want to see it, but an empty/partial
+    `evaluations` list is a valid, expected call when you can't.
+
     Args:
-        evaluations: List of evaluation results, one per document request:
+        evaluations: List of evaluation results, one per document request
+            you have a confident, specific judgment about (may be empty):
             - document_type (str): The document_type being evaluated
             - satisfied_indices (list[int]): 0-based indices of documentation_requirements
               that ARE satisfied by the manifest
