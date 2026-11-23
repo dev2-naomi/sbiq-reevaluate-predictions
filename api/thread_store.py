@@ -17,6 +17,7 @@ import json
 import os
 import uuid
 from datetime import UTC, datetime
+from decimal import Decimal
 from typing import Any
 
 # Terminal run statuses — a polling client should stop polling once one of
@@ -58,6 +59,27 @@ def _capped_input_payload(run_body: dict[str, Any]) -> dict[str, Any]:
             "full final state instead."
         ),
     }
+
+
+def _floats_to_decimal(obj: Any) -> Any:
+    """Recursively convert native Python ``float`` values to ``Decimal``.
+
+    boto3's DynamoDB serializer rejects plain floats outright
+    ("Float types are not supported. Use Decimal types instead."), raised
+    straight out of put_item/update_item. Run bodies and results routinely
+    contain floats (loan amounts, interest rates, etc.), so anything headed
+    into DynamoDB must go through this first. Converting via ``str(obj)``
+    (rather than ``Decimal(obj)`` directly) avoids baking in binary-float
+    imprecision — e.g. ``Decimal(0.1)`` is ``0.1000000000000000055511...``,
+    while ``Decimal(str(0.1))`` is exactly ``0.1``.
+    """
+    if isinstance(obj, float):
+        return Decimal(str(obj))
+    if isinstance(obj, dict):
+        return {k: _floats_to_decimal(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_floats_to_decimal(v) for v in obj]
+    return obj
 
 
 class ThreadStore:
@@ -186,7 +208,7 @@ class DynamoDBThreadStore(ThreadStore):
             "metadata": metadata or {},
             "status": "idle",
         }
-        self._table.put_item(Item=record)
+        self._table.put_item(Item=_floats_to_decimal(record))
         return {
             "thread_id": thread_id,
             "created_at": record["created_at"],
@@ -218,10 +240,12 @@ class DynamoDBThreadStore(ThreadStore):
             Key={"PK": f"THREAD#{thread_id}", "SK": "METADATA"},
             UpdateExpression="SET metadata = :metadata, #status = :status",
             ExpressionAttributeNames={"#status": "status"},
-            ExpressionAttributeValues={
-                ":metadata": merged,
-                ":status": "busy",
-            },
+            ExpressionAttributeValues=_floats_to_decimal(
+                {
+                    ":metadata": merged,
+                    ":status": "busy",
+                }
+            ),
         )
 
     def create_run(
@@ -246,7 +270,7 @@ class DynamoDBThreadStore(ThreadStore):
             "error": None,
             "result": None,
         }
-        self._table.put_item(Item=item)
+        self._table.put_item(Item=_floats_to_decimal(item))
         return {k: v for k, v in item.items() if k not in ("PK", "SK")}
 
     def get_run(self, run_id: str) -> dict[str, Any] | None:
@@ -273,7 +297,7 @@ class DynamoDBThreadStore(ThreadStore):
             updates["error"] = error
 
         expr_names = {f"#{k}": k for k in updates}
-        expr_values = {f":{k}": v for k, v in updates.items()}
+        expr_values = _floats_to_decimal({f":{k}": v for k, v in updates.items()})
         set_clause = ", ".join(f"#{k} = :{k}" for k in updates)
         self._table.update_item(
             Key={"PK": f"RUN#{run_id}", "SK": "METADATA"},
